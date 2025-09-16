@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import HeroPara from "./components/HeroPara";
 import Impact from "./components/Impact";
+import Insight from "./components/Insight";
 import Process from "./components/Process";
 import Services from "./components/Services";
 import Testimonial from "./components/Testimonial";
@@ -22,6 +23,7 @@ export default function Home() {
       <Clients />
       <Impact />
       <CaseStudies />
+      <Insight />
       <Contact />
       <Footer />
     </main>
