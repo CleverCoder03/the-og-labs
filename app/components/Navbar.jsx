@@ -82,9 +82,9 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <div className=" mt-20 text-xl uppercase gap-4 text-white">
+            <div className=" mt-20 mb-20 text-xl uppercase gap-4 text-white">
               <h1>help@theoglabs.com</h1>
-              <h1>+91 12345 12345 | +91 12345 12345</h1>
+              <h1>Pune, India</h1>
             </div>
           </div>
 
