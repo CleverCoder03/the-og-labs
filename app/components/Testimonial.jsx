@@ -25,7 +25,7 @@ const Testimonial = () => {
   return (
     <div className="relative mt-10">
       <h2 className="text-center">Testimonials</h2>
-      <h1 className="text-center text-4xl mt-5">Trusted by Industry Leaders</h1>
+      <h1 className="text-center text-4xl font-poppins-medium mt-5">Trusted by Industry Leaders</h1>
       <div className="bg-black text-white mt-10 px-6 py-20">
         <div className="flex flex-col gap-15">
           <div className="relative size-10">
@@ -46,7 +46,7 @@ const Testimonial = () => {
                 <h3 className="font-playfair-regular text-center md:text-left">
                   {currentClient.name}
                 </h3>
-                <p className="text-white/60">{currentClient.desg}</p>
+                <p className="text-white/60 text-center md:text-left">{currentClient.desg}</p>
               </div>
             </div>
             <div className="border p-2 cursor-pointer" onClick={()=>goToSlide(currentIndex + 1)}>
