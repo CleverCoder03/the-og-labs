@@ -4,7 +4,7 @@ import { ServiceCard } from "./ServiceCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { services } from "@/lib/services";
+import { services } from "@/lib/index";
 
 gsap.registerPlugin(ScrollTrigger);
 
