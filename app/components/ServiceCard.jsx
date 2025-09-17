@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export function ServiceCard({title, desc, bgCoverImg, serviceImg}) {
   return (
-    <CardContainer className="h-full">
+    <CardContainer className="h-full xl:w-[22dvw]">
       <div className="absolute size-full">
         <Image src={bgCoverImg} alt="service-1-bg" className="rounded-xl" fill />
       </div>

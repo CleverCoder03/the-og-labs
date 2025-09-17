@@ -23,16 +23,16 @@ const processes = [
 
 const Process = () => {
   return (
-    <div className="bg-[#0E0652] mt-10 py-10 text-white">
-      <div className="mt-10">
-        <h2 className="text-center">The OG Lab's Process</h2>
-        <p className="text-4xl font-poppins-medium text-center mt-5">
+    <div className="bg-[#0E0652] mt-10 md:mt-15 lg:mt-18 py-10 text-white md:py-15 lg:py-18 md:px-10 lg:px-15">
+      <div className="mt-10 lg:mt-0">
+        <h2 className="text-center md:text-xl">The OG Lab's Process</h2>
+        <p className="text-4xl md:text-5xl font-poppins-medium text-center mt-5">
           Our Formula for Success
         </p>
       </div>
-      <div className="mt-10 flex flex-col gap-6 px-6">
+      <div className="mt-10 md:mt-15 lg:mt-18 flex flex-col gap-6 lg:gap-10 xl:gap-15 lg:flex-row lg:justify-between lg:w-full px-6 lg:px-0">
         {processes.map((process) => (
-          <div key={process.id} className="bg-[#0C0070] p-4 flex flex-col gap-8">
+          <div key={process.id} className="bg-[#0C0070] p-4 flex flex-col justify-between gap-8 lg:gap-30 xl:gap-40 lg:w-1/4">
             <div className="font-poppins-semibold">
               <h1>{process.id}</h1>
               <h1>{process.name}</h1>

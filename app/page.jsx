@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import HeroPara from "./components/HeroPara";
 import Impact from "./components/Impact";
 import Insight from "./components/Insight";
+import Navbar from "./components/Navbar";
 import Process from "./components/Process";
 import Services from "./components/Services";
 import Testimonial from "./components/Testimonial";
@@ -14,6 +15,7 @@ import Testimonial from "./components/Testimonial";
 export default function Home() {
   return (
     <main>
+      <Navbar />
       <Hero />
       <HeroPara />
       <Services />

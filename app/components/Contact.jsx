@@ -3,18 +3,25 @@ import Button from "./Button";
 
 const Contact = () => {
   return (
-    <div className="bg-[#0E0652] mt-10 py-15 px-6">
-      <h2 className="text-white font-poppins-regular">Contact Us</h2>
-      <div className="text-white font-poppins-semibold text-4xl my-8">
-        <h1>Let's Build</h1>
-        <h1>Smarter, Together.</h1>
+    <div className="bg-[#0E0652] py-15 lg:py-20 xl:py-25 px-6 md:px-10 lg:px-15 lg:flex lg:justify-between lg:items-center">
+      <div className="w-fit">
+        <h2 className="text-white font-poppins-regular md:text-xl">
+          Contact Us
+        </h2>
+        <div className="text-white font-poppins-semibold text-4xl lg:text-[6.5vw] lg:font-poppins-regular lg:leading-[1.1] my-8">
+          <h1>Let's Build</h1>
+          <h1>Smarter, Together.</h1>
+        </div>
+        <p className="text-white/70 font-poppins-regular lg:w-[60vw]">
+          Bring us your toughest marketing challenge and we’ll engineer
+          solutions with AI, data, and precision.
+        </p>
       </div>
-      <p className="text-white font-poppins-regular">
-        Bring us your toughest marketing challenge and we’ll engineer solutions
-        with AI, data, and precision.
-      </p>
-      <div className="mt-20">
-        <Button tag={"Start Your Project"} className={"bg-white text-black font-poppins-medium"} />
+      <div className="mt-20 lg:mt-0">
+        <Button
+          tag={"Start Your Project"}
+          className={"bg-white text-black font-poppins-medium"}
+        />
       </div>
     </div>
   );

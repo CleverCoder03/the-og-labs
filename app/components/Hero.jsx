@@ -6,21 +6,21 @@ const Hero = () => {
   return (
     <div className="h-full w-screen">
       <div className="absolute top-0 left-0 h-screen w-full z-[-1]">
-        <Image className="object-cover " src="/hero-bg.png" alt="hero-bg" fill />
+        <Image className="md:object-cover " src="/hero-bg.png" alt="hero-bg" fill />
       </div>
 
       <div className="h-screen w-full flex flex-col justify-center items-center">
         <div className="mt-10 lg:mt-20">
-          <h1 className="text-white font-playfair-regular text-[12vw] md:text-7xl lg:text-[6vw] lg:w-[80vw]  text-center leading-[1.3]">
+          <h1 className="text-white font-playfair-regular text-[3.7rem] md:text-7xl lg:text-[6vw] lg:w-[80vw]  text-start md:text-center leading-[1.3] px-6">
             The OG Labs, Redefining Digital Marketing with AI
           </h1>
-          <p className="text-white text-xl text-center font-poppins-regular mt-10">
+          <p className="hidden md:block text-white text-xl text-center font-poppins-regular mt-10">
             Where Intelligence Meets Imagination
           </p>
         </div>
         <div className="mt-20">
           <Link href="/contact">
-            <div className="bg-black/40 backdrop-blur-md text-white p-4 font-poppins-medium flex items-center gap-2">
+            <div className="bg-white/90 backdrop-blur-md text-black p-4 font-poppins-medium flex items-center gap-2">
               Start Your AI-Powered Journey <MoveRight />
             </div>
           </Link>
