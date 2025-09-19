@@ -3,6 +3,18 @@
 
 /* @custom-variant dark (&:is(.dark *)); */
 
+/* @media (min-width: "1024px") {
+  .insight-height-1 {
+    height: 30vw !important;
+  }
+  .insight-height-2 {
+    height: 20vw;
+  }
+  .insight-height-3 {
+    height: 24vw;
+  }
+} */
+
 @layer base {
   /* Michroma */
   @font-face {
@@ -12,7 +24,8 @@
   /* Playfair-Display */
   @font-face {
     font-family: "playfair-black";
-    src: url("./fonts/Playfair_Display/PlayfairDisplay-Black.ttf") format("truetype");
+    src: url("./fonts/Playfair_Display/PlayfairDisplay-Black.ttf")
+      format("truetype");
   }
   @font-face {
     font-family: "playfair-black-italic";
@@ -21,7 +34,8 @@
   }
   @font-face {
     font-family: "playfair-bold";
-    src: url("./fonts/Playfair_Display/PlayfairDisplay-Bold.ttf") format("truetype");
+    src: url("./fonts/Playfair_Display/PlayfairDisplay-Bold.ttf")
+      format("truetype");
   }
   @font-face {
     font-family: "playfair-bold-italic";
@@ -175,7 +189,8 @@
   --font-poppins-thin-italic: "poppins-thin-italic", "sans-serif";
 }
 
-body, html{
+body,
+html {
   box-sizing: border-box;
   overflow-x: hidden;
   margin: 0;
@@ -288,4 +303,3 @@ body, html{
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
-

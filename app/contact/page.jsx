@@ -1,12 +1,14 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
+import React from "react";
+import Navbar from "../components/Navbar";
+import LandingBanner from "../components/LandingBanner";
 
 const ContactPage = () => {
   return (
     <div>
       <Navbar />
-      ContactPage</div>
-  )
-}
+      <LandingBanner title={"Contact Us"} />
+    </div>
+  );
+};
 
-export default ContactPage
+export default ContactPage;

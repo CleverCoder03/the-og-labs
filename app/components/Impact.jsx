@@ -27,8 +27,8 @@ const impactCards = [
     line1: "Data-backed paid social strategies",
     line2: "AI-driven optimization across platforms",
     line3: "Conversion-focused campaigns that adapt in real time",
-    bgColor: "#895BBC",
-  },
+    bgColor: "#895bbc",
+  }
 ];
 
 const Impact = () => {
@@ -47,7 +47,7 @@ const Impact = () => {
       </div>
       <div className="lg:w-1/2">
         {impactCards.map((impact)=>(
-          <div key={impact.id} className={`w-full bg-[${impact.bgColor}] mt-10 p-5 lg:py-10 lg:px-7`}>
+          <div key={impact.id} className={`w-full mt-10 p-5 lg:py-10 lg:px-7`} style={{ backgroundColor: impact.bgColor }}>
           <h1 className="font-poppins-medium text-lg lg:text-xl xl:text-2xl">
             {impact.title}
           </h1>

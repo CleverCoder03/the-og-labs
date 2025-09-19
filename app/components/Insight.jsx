@@ -6,21 +6,21 @@ const blogs = [
     title: "The Future of AI in Marketing",
     src: "/insight-1.png",
     date: "August 28, 2025 • 6 min read",
-    h: "30vw"
+    h: "30vw",
   },
   {
     id: 2,
     title: "5 Proven Strategies to Boost Brand Engagement",
     src: "/insight-2.png",
     date: "September 2, 2025 • 4 min read",
-    h: "20vw"
+    h: "20vw",
   },
   {
     id: 3,
     title: "Why Storytelling is the Heart of Modern Advertising",
     src: "/insight-3.png",
     date: "September 5, 2025 • 5 min read",
-    h: "24vw"
+    h: "24vw",
   },
 ];
 
@@ -37,16 +37,21 @@ const Insight = () => {
       <div className="px-6 pb-10 md:px-10 lg:px-15 lg:flex lg:justify-between lg:gap-4 xl:gap-7">
         {blogs.map((blog) => (
           <div key={blog.id} className="my-10 lg:w-1/3">
-            <div className={`relative w-full h-[15rem] md:h-[22rem] lg:h-[${blog.h}]`}>
+            <div
+              className="relative w-full h-[15rem] md:h-[22rem]"
+              style={{ "--lg-height": blog.h }}
+            >
               <Image
                 src={blog.src}
                 alt="insight"
-                className="object-cover"
+                className="object-cover h-[var(--lg-height)]"
                 fill
               />
             </div>
             <div className="mt-4 lg:flex lg:flex-col-reverse">
-              <h1 className="font-playfair-semibold text-lg lg:text-white lg:mt-5">{blog.title}</h1>
+              <h1 className="font-playfair-semibold text-lg lg:text-white lg:mt-5">
+                {blog.title}
+              </h1>
               <p className="font-poppins-regular text-sm text-black/60 lg:text-white/60 lg:text-end">
                 {blog.date}
               </p>
@@ -54,7 +59,7 @@ const Insight = () => {
           </div>
         ))}
       </div>
-        <div className="hidden lg:block lg:absolute lg:bottom-0 bg-black h-1/2 z-[-1] w-full"></div>
+      <div className="hidden lg:block lg:absolute lg:bottom-0 bg-black h-1/2 z-[-1] w-full"></div>
     </div>
   );
 };
