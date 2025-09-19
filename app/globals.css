@@ -15,6 +15,12 @@
   }
 } */
 
+.white{
+  color: white;
+  transition: all;
+  transition-duration: 200;
+}
+
 @layer base {
   /* Michroma */
   @font-face {

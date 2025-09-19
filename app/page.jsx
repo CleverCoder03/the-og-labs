@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import About from "./components/About";
 import CaseStudies from "./components/CaseStudies";
 import Clients from "./components/Clients";
@@ -11,23 +13,30 @@ import Navbar from "./components/Navbar";
 import Process from "./components/Process";
 import Services from "./components/Services";
 import Testimonial from "./components/Testimonial";
+import Loader from "./components/Loader";
 
 export default function Home() {
+  const [loaded, setLoaded] = useState(false);
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      <HeroPara />
-      <Services />
-      <Testimonial />
-      <About />
-      <Process />
-      <Clients />
-      <Impact />
-      <CaseStudies />
-      <Insight />
-      <Contact />
-      <Footer />
-    </main>
+    <>
+      {!loaded && <Loader onFinish={() => setLoaded(true)} />}
+      {loaded && (
+        <main>
+          <Navbar />
+          <Hero />
+          <HeroPara />
+          <Services />
+          <Testimonial />
+          <About />
+          <Process />
+          <Clients />
+          <Impact />
+          <CaseStudies />
+          <Insight />
+          <Contact />
+          <Footer />
+        </main>
+      )}
+    </>
   );
 }

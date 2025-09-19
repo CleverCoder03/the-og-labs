@@ -49,11 +49,11 @@ const ServicePage = () => {
         className={"lg:w-[65%] xl:w-[45%]"}
         button={<Button tag={"Contact Us"} className={"bg-black text-white"} />}
       />
-      <section className="font-sans">
+      <section className="font-sans mt-10 lg:mt-12 xl:mt-15">
         {sectionsData.map((section, index) => (
           <div
             key={section.id}
-            className={`mt-5 md:mt-8 lg:mt-10 xl:mt-15 px-6 py-10 md:px-10 lg:px-15`}
+            className={`px-6 py-6 md:py-10 md:px-10 lg:px-15`}
           >
             <div className={`flex flex-col md:flex-row justify-center items-center ${
               index % 2 !== 0 ? "md:flex-row-reverse" : ""

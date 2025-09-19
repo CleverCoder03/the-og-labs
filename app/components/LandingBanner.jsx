@@ -1,7 +1,16 @@
+"use client"
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
 import React from "react";
 
 const LandingBanner = ({title}) => {
+  useGSAP(()=> (
+    gsap.from("h1", {
+      opacity: 0,
+      delay: 0.4
+    })
+  ))
   return (
     <div className="h-[60vh] w-screen">
       <div className="relative h-full w-full">

@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { usePathname } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "motion/react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -24,6 +25,11 @@ const Navbar = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   useGSAP(() => {
+    // gsap.from(headerRef.current, {
+    //   yPercent: -500,
+    //   delay: 1
+    // })
+
     if (isMobile) {
       if (toggle) {
         gsap.to(navRef.current, {
@@ -61,10 +67,23 @@ const Navbar = () => {
   }, [toggle]);
   return (
     <main className="fixed inset-x-0 z-50 border-none transition-all duration-700 ">
-      <header ref={headerRef} className="absolute h-full w-full md:py-5 md:px-10 lg:px-15">
-        <nav
+      <motion.div
+        initial={{ y: -500 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6, ease: "easeInOut" }}
+        ref={headerRef}
+        className="absolute h-full w-full md:py-5 md:px-10 lg:px-15"
+      >
+        <motion.nav
+          initial={{ backgroundColor: "#a1a1a1c9" }}
+          animate={
+            isMobile ? toggle
+              ? { backgroundColor: "#575757" }
+              : { backgroundColor: "#a1a1a1c9" } : ""
+          }
+          transition={{ duration: 0.4, delay: 0.1, ease: "easeInOut" }}
           ref={navRef}
-          className="w-full bg-gray-400/60 backdrop-blur-md flex md:items-center justify-between p-4 lg:p-2"
+          className="w-full backdrop-blur-2xl flex md:items-center justify-between p-4 lg:p-2"
         >
           <h1 className="uppercase font-michroma-regular text-white md:pl-2">
             <Link href={"/"} onClick={() => setToggle(false)}>
@@ -76,7 +95,7 @@ const Navbar = () => {
             ref={navContainerRef}
             className="absolute hidden bottom-4 flex-col gap-4 md:block md:relative md:bottom-0"
           >
-            {navLinks.map((link) => ( 
+            {navLinks.map((link) => (
               <Link
                 className={`text-6xl uppercase gap-4 text-white md:text-base md:capitalize md:ml-4 md:underline-none ${
                   pathname === link.href
@@ -104,10 +123,13 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:block">
-            <Button tag={"Get Started"} className={"bg-white font-poppins-medium"} />
+            <Button
+              tag={"Get Started"}
+              className={"bg-white font-poppins-medium"}
+            />
           </div>
-        </nav>
-      </header>
+        </motion.nav>
+      </motion.div>
     </main>
   );
 };
