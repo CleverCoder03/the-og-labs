@@ -1,11 +1,17 @@
 "use client";
 import { clients } from "@/lib";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import SplitText from "gsap/SplitText";
 import { MoveLeft, MoveRight } from "lucide-react";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+
+gsap.registerPlugin(SplitText);
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const feedback = useRef();
 
   const totalClients = clients.length;
 
@@ -18,6 +24,35 @@ const Testimonial = () => {
   const getCocktailAt = (indexOffSet) => {
     return clients[(currentIndex + indexOffSet + totalClients) % totalClients];
   };
+
+  useGSAP(() => {
+    const splitfeedback = new SplitText(feedback.current, {
+      type: "chars, words",
+    });
+
+    const tl = gsap.timeline()
+
+    tl.fromTo(
+      splitfeedback.words,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.6, stagger: 0.2, ease: "power.inOut" }
+    );
+    tl.fromTo(
+      "#clientImg",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.2, ease: "power.inOut" }
+    );
+    tl.fromTo(
+      "#clientInfo h3",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.2, ease: "power.inOut" }
+    );
+    tl.fromTo(
+      "#clientInfo p",
+      { opacity: 0 },
+      { opacity: 1, ease: "power.inOut" }
+    );
+  }, [currentIndex]);
 
   const currentClient = getCocktailAt(0);
   return (
@@ -32,7 +67,10 @@ const Testimonial = () => {
             <Image src="/d-quote.png" alt="double-quote" fill />
           </div>
 
-          <div className="font-poppins-medium text-center text-2xl lg:text-start lg:text-4xl lg:leading-[1.4] xl:text-5xl xl:leading-[1.4]">
+          <div
+            ref={feedback}
+            className="font-poppins-medium text-center text-2xl lg:text-start lg:text-4xl lg:leading-[1.4] xl:text-5xl xl:leading-[1.4]"
+          >
             {currentClient.mesg}
           </div>
 
@@ -44,11 +82,16 @@ const Testimonial = () => {
               <MoveLeft />
             </div>
 
-            <div className="flex gap-5 align-middle items-center">
+            <div id="client" className="flex gap-5 align-middle items-center">
               <div className="relative size-10 hidden md:block">
-                <Image src={currentClient.image} alt="client" fill />
+                <Image
+                  id="clientImg"
+                  src={currentClient.image}
+                  alt="client"
+                  fill
+                />
               </div>
-              <div>
+              <div id="clientInfo">
                 <h3 className="font-playfair-regular text-center md:text-left">
                   {currentClient.name}
                 </h3>
@@ -74,9 +117,7 @@ const Testimonial = () => {
                 <button
                   key={client.id}
                   className={`w-full border py-5 ${
-                    isActive
-                      ? "bg-white"
-                      : "text-white/50 border-white/50"
+                    isActive ? "bg-white" : "text-white/50 border-white/50"
                   }`}
                   onClick={() => goToSlide(index)}
                 >
