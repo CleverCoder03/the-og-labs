@@ -123,10 +123,12 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:block">
-            <Button
+            <Link href="/contact">
+              <Button
               tag={"Get Started"}
               className={"bg-white font-poppins-medium"}
             />
+            </Link>
           </div>
         </motion.nav>
       </motion.div>

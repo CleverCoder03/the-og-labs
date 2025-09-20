@@ -34,7 +34,7 @@ const impactCards = [
 const Impact = () => {
   return (
     <div className="bg-black text-white mt-10 md:mt-15 lg:mt-18 py-15 lg:py-18 px-6 md:px-10 lg:flex lg:px-15  lg:justify-between lg:items-start lg:relative">
-      <div className="">
+      <div className="sticky top-50">
         <h1 className="md:text-xl">The OG Labs Expertise</h1>
         <div className="my-8 text-4xl lg:text-5xl xl:text-6xl font-poppins-semibold">
           <h1>How We</h1>

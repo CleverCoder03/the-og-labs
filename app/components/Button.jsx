@@ -2,7 +2,7 @@ import React from 'react'
 
 const Button = ({tag,type, className}) => {
   return (
-    <button className={`${className} inline text-xs py-3 px-7 md:text-lg`} type={type}>
+    <button className={`${className} inline text-xs py-3 px-7 md:text-lg cursor-pointer`} type={type}>
       {tag}
     </button>
   )
