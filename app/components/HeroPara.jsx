@@ -51,7 +51,7 @@ const HeroPara = () => {
 
   return (
     <div>
-      <div ref={sectionRef} className="mt-20 px-6 md:px-10 lg:px-15">
+      <div ref={sectionRef} className="bg-white mt-20 px-6 md:px-10 lg:px-15">
         <div className="font-poppins-medium text-3xl flex items-center">
           <div className="leading-[1.3] lg:leading-[1.7] xl:leading-[2.3]">
             <span className="pr-10 text-base uppercase font-poppins-regular align-middle hidden md:inline lg:text-xl">

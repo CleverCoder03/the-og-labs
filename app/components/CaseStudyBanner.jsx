@@ -2,10 +2,12 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
+import { useRef } from "react";
 
 const CaseStudyBanner = ({title}) => {
+  const caseStudyTitleRef = useRef(null)
   useGSAP(()=> (
-    gsap.from("h1", {
+    gsap.from(caseStudyTitleRef.current, {
       opacity: 0,
       delay: 0.4
     })
@@ -23,7 +25,7 @@ const CaseStudyBanner = ({title}) => {
           />
           </div>
           <div className="absolute h-full w-full flex justify-center items-center bottom-0 left-0 px-6 py-5 md:px-10 md:py-10 lg:px-15">
-            <h1 className="text-4xl lg:text-[4.6vw] font-playfair-regular text-white text-center">{title}</h1>
+            <h1 ref={caseStudyTitleRef} className="text-4xl lg:text-[4.6vw] font-playfair-regular text-white text-center">{title}</h1>
           </div>
         </div>
       </div>

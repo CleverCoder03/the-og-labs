@@ -56,7 +56,7 @@ const Testimonial = () => {
 
   const currentClient = getCocktailAt(0);
   return (
-    <div className="relative mt-10 md:mt-15 lg:mt-18">
+    <div className="bg-white relative mt-10 md:mt-15 lg:mt-18">
       <h2 className="text-center md:text-xl">Testimonials</h2>
       <h1 className="text-center text-4xl md:text-5xl font-poppins-medium mt-5">
         Trusted by Industry Leaders

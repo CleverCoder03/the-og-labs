@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const About = () => {
   return (
-    <>
+    <div className="bg-white">
       <div className="mt-10 md:mt-15 lg:mt-18">
         <h2 className="text-center md:text-xl">The OG Lab Story</h2>
         <p className="text-4xl md:text-5xl  font-poppins-medium text-center mt-5">
@@ -31,7 +31,7 @@ const About = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

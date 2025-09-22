@@ -4,32 +4,6 @@ import Image from "next/image";
 import caseStudiesData from "@/lib";
 import Link from "next/link";
 
-// const caseStudies = [
-//   {
-//     id: 1,
-//     title: "Elevate Apparel",
-//     desc: "Boosted brand awareness and drove a 45% sales increase through targeted campaigns.",
-//     src: "/round_tube.png"
-//   },
-//   {
-//     id: 2,
-//     title: "NovaTech",
-//     desc: "Achieved 3x lead generation with data-driven digital marketing strategies.",
-//     src: "/knot3.png"
-//   },
-//   {
-//     id: 3,
-//     title: "GreenGlow Skincare",
-//     desc: "Increased online engagement by 60% with creative social media storytelling.",
-//     src: "/anim93.png"
-//   },
-//   {
-//     id: 4,
-//     title: "UrbanEats",
-//     desc: "Grew customer base by 35% using AI-powered ad campaigns.",
-//     src: "/spring.png"
-//   },
-// ];
 
 const CaseStudies = () => {
   const [hoveredId, setHoveredId] = useState(null);
@@ -48,14 +22,14 @@ const CaseStudies = () => {
   };
 
   return (
-    <>
-      <div className="mt-10 md:mt-15 lg:mt-18">
+    <div className="">
+      <div className="bg-white mt-10 md:mt-15 lg:mt-18">
         <h2 className="text-center md:text-xl">Our Portfolio</h2>
         <p className="text-4xl md:text-5xl font-poppins-medium text-center mt-5">
           Case Studies
         </p>
       </div>
-      <div className="mt-5 px-6 md:px-10 lg:px-15 relative">
+      <div className="bg-white mt-5 px-6 md:px-10 lg:px-15 relative">
         {caseStudiesData.map((caseStudy) => (
           <Link key={caseStudy.id} href={`/casestudy/${caseStudy.id}`}>
             <div
@@ -70,7 +44,7 @@ const CaseStudies = () => {
                 <div className="py-10 pl-3 lg:pl-5">
                   <h1
                     className={`font-poppins-medium text-lg transition-all duration-300 ${
-                      hoveredId === caseStudy.id ? "text-white" : ""
+                      hoveredId === caseStudy.id && "text-white"
                     }`}
                   >
                     {caseStudy.title}
@@ -107,7 +81,7 @@ const CaseStudies = () => {
           </Link>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

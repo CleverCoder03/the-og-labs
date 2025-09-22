@@ -88,9 +88,35 @@ const Hero = () => {
     tl.from("#scroll", {
       opacity: 0,
     });
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          // markers: true
+        },
+      })
+      .to("#spring", { y: 300 }, 0)
+      .to("#knot", { y: 300 }, 0);
+
+      gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          // markers: true
+        },
+      })
+      .to(imageRef.current, { scale: 2.5, duration: 0.8, ease: "power1.in" })
+
   }, []);
   return (
-    <div className="h-full w-screen">
+    <div id="hero" className="h-full w-screen">
       <div className="absolute top-0 left-0 h-screen w-full z-[-5] overflow-hidden">
         <Image
           ref={imageRef}
@@ -100,7 +126,7 @@ const Hero = () => {
           fill
         />
       </div>
-      <div className="absolute top-0 left-0 h-screen w-screen flex justify-between items-center md:px-[10vw]">
+      <div className="absolute top-0 left-0 h-screen w-screen flex justify-between items-center md:px-[10vw] overflow-hidden">
         <motion.div
         id="knot"
           className="relative top-[180px] hidden md:inline mix-blend-plus-lighter"
@@ -110,23 +136,23 @@ const Hero = () => {
           <Image
             src="/knot3.png"
             alt="cursor"
-            height="250"
-            width="250"
+            height="200"
+            width="200"
             className="max-w-none animatedImg"
             draggable="false"
           />
         </motion.div>
         <motion.div
         id="spring"
-          className="relative -top-[280px] hidden md:inline mix-blend-plus-lighter"
+          className="relative -top-[260px] hidden md:inline mix-blend-plus-lighter"
           drag
           // dragSnapToOrigin
         >
           <Image
             src="/spring.png"
             alt="message"
-            height="250"
-            width="250"
+            height="200"
+            width="200"
             className="max-w-none animatedImg"
             draggable="false"
           />

@@ -27,7 +27,7 @@ const blogs = [
 const Insight = () => {
   return (
     <div className="relative">
-      <div className="mt-20 md:mt-25 lg:mt-28">
+      <div className="bg-white mt-20 md:mt-25 lg:mt-28">
         <h2 className="text-center md:text-xl">The OG Labs Blogs</h2>
         <p className="text-4xl md:text-5xl font-poppins-medium text-center mt-5">
           The Insight Hub

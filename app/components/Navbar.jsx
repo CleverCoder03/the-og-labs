@@ -83,7 +83,7 @@ const Navbar = () => {
           }
           transition={{ duration: 0.4, delay: 0.1, ease: "easeInOut" }}
           ref={navRef}
-          className="w-full backdrop-blur-2xl flex md:items-center justify-between p-4 lg:p-2"
+          className="w-full !backdrop-blur-2xl flex md:items-center justify-between p-4 lg:p-2"
         >
           <h1 className="uppercase font-michroma-regular text-white md:pl-2">
             <Link href={"/"} onClick={() => setToggle(false)}>

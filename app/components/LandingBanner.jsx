@@ -2,11 +2,12 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 
 const LandingBanner = ({title}) => {
+  const landingBannerRef = useRef(null)
   useGSAP(()=> (
-    gsap.from("h1", {
+    gsap.from(landingBannerRef.current, {
       opacity: 0,
       delay: 0.4
     })
@@ -24,7 +25,7 @@ const LandingBanner = ({title}) => {
           />
           </div>
           <div className="absolute bottom-0 left-0 px-6 py-5 md:px-10 md:py-10 lg:px-15">
-            <h1 className="text-5xl lg:text-7xl xl:text-8xl font-poppins-semibold text-white">{title}</h1>
+            <h1 ref={landingBannerRef} className="text-5xl lg:text-7xl xl:text-8xl font-poppins-semibold text-white">{title}</h1>
           </div>
         </div>
       </div>
