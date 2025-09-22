@@ -35,7 +35,7 @@ const Testimonial = () => {
     tl.fromTo(
       splitfeedback.words,
       { opacity: 0 },
-      { opacity: 1, duration: 0.6, stagger: 0.2, ease: "power.inOut" }
+      { opacity: 1, duration: 0.6, stagger: 0.1, ease: "power.inOut" }
     );
     tl.fromTo(
       "#clientImg",

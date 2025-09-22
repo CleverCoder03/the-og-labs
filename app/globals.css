@@ -21,6 +21,19 @@
   transition-duration: 200;
 }
 
+.animatedImg{
+  object-fit: contain;
+  animation: move 2s infinite ease alternate;
+}
+@keyframes move{
+    from{
+        transform: translateY(-1vw);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
 @layer base {
   /* Michroma */
   @font-face {

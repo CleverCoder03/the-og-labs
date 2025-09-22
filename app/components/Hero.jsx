@@ -6,6 +6,7 @@ import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import { motion } from "motion/react";
 
 const Hero = () => {
   const imageRef = useRef();
@@ -14,46 +15,129 @@ const Hero = () => {
     gsap.registerPlugin(SplitText);
     const splitTitle = new SplitText("#title", { type: "chars, words" });
 
-    const addColor = () =>
-      splitTitle.words.forEach((word) => word.classList.add("white"));
+    // const addColor = () =>
+    //   splitTitle.words.forEach((word) => word.classList.add("white"));
 
-    gsap.from(imageRef.current, {
-      opacity: 0,
-      delay: 1.5,
-    });
+    // gsap.fromTo(imageRef.current, {
+    //   opacity: 0,
+    //   duration: 0.8,
+    //   scale: 0,
+    //   ease: "power1.in",
+    //   delay: 1.5,
+    // }, {
+    //   opacity: 1,
+    //   duration: 0.8,
+    //   scale: 1.2,
+    //   ease: "power1.in",
+    //   delay: 1.5,
+    // });
 
-    gsap.from("#hero-button", {
-      opacity: 0,
-      yPercent: 200,
-      delay: 1.6
-    })
+    // gsap.from("#hero-button", {
+    //   opacity: 0,
+    //   yPercent: 200,
+    //   delay: 1.7,
+    // });
 
-    gsap.from(splitTitle.words, {
+    // gsap.from(splitTitle.words, {
+    //   opacity: 0,
+    //   yPercent: 50,
+    //   stagger: 0.15,
+    //   onComplete: addColor,
+    // });
+
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      imageRef.current,
+      {
+        opacity: 0,
+        scale: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1,
+        scale: 1.2,
+        ease: "power1.in",
+      }
+    );
+
+    tl.from(splitTitle.words, {
       opacity: 0,
       yPercent: 50,
       stagger: 0.15,
-      onComplete: addColor,
+      // onComplete: addColor,
+    });
+
+    tl.from("#hero-button", {
+      opacity: 0,
+      yPercent: 200,
+      // delay: 1.7,
+    });
+
+    tl.from("#knot", {
+      opacity: 0,
+      duration: 0.2,
+      ease: "power1.in"
+    })
+    tl.from("#spring", {
+      opacity: 0,
+      duration: 0.2,
+      ease: "power1.in"
+    })
+
+    tl.from("#scroll", {
+      opacity: 0,
     });
   }, []);
   return (
     <div className="h-full w-screen">
-      <div
-        ref={imageRef}
-        className="absolute top-0 left-0 h-screen w-full z-[-1]"
-      >
+      <div className="absolute top-0 left-0 h-screen w-full z-[-5] overflow-hidden">
         <Image
-          className="md:object-cover "
+          ref={imageRef}
+          className="md:object-cover origin-center"
           src="/hero-bg.png"
           alt="hero-bg"
           fill
         />
+      </div>
+      <div className="absolute top-0 left-0 h-screen w-screen flex justify-between items-center md:px-[10vw]">
+        <motion.div
+        id="knot"
+          className="relative top-[180px] hidden md:inline mix-blend-plus-lighter"
+          drag
+          // dragSnapToOrigin
+        >
+          <Image
+            src="/knot3.png"
+            alt="cursor"
+            height="250"
+            width="250"
+            className="max-w-none animatedImg"
+            draggable="false"
+          />
+        </motion.div>
+        <motion.div
+        id="spring"
+          className="relative -top-[280px] hidden md:inline mix-blend-plus-lighter"
+          drag
+          // dragSnapToOrigin
+        >
+          <Image
+            src="/spring.png"
+            alt="message"
+            height="250"
+            width="250"
+            className="max-w-none animatedImg"
+            draggable="false"
+          />
+        </motion.div>
       </div>
 
       <div className="h-screen w-full flex flex-col justify-center items-center">
         <div className="mt-10 lg:mt-20">
           <h1
             id="title"
-            className="text-black transition-all duration-200 font-playfair-regular text-[3.7rem] md:text-7xl lg:text-[6vw] lg:w-[80vw]  text-start md:text-center leading-[1.3] px-6"
+            className="text-white transition-all duration-200 font-playfair-regular text-[3.7rem] md:text-7xl lg:text-[6vw] lg:w-[80vw]  text-start md:text-center leading-[1.3] px-6"
           >
             The OG Labs, Redefining Digital Marketing with AI
           </h1>
@@ -68,7 +152,7 @@ const Hero = () => {
             </div>
           </Link>
         </div>
-        <div className="mt-20">
+        <div id="scroll" className="mt-20">
           <h2 className="text-white/60 hidden md:block">Scroll to Explore</h2>
         </div>
       </div>
