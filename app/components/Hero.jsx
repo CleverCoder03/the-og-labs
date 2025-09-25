@@ -115,6 +115,21 @@ const Hero = () => {
         },
       })
       .to(imageRef.current, { scale: 2.5, duration: 0.8, ease: "power1.in" })
+      
+      gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#hero",
+          start: "top top",
+          end: "top -20%",
+          scrub: true,
+        },
+      }).fromTo("#scroll", {
+        opacity: 1,
+        ease: "power2.out"
+      }, {
+        opacity: 0
+      })
 
   }, []);
   return (

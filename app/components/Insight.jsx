@@ -17,8 +17,8 @@ const Insight = () => {
         className="px-6 pb-10 md:px-10 lg:px-15 lg:flex lg:justify-between lg:gap-4 xl:gap-7"
       >
         {blogs.map((blog) => (
-          <div className="insightCards my-10 lg:w-1/3">
-          <Link key={blog.id} href={`/insight/${blog.id}`}>
+          <div key={blog.id} className="insightCards my-10 lg:w-1/3">
+            <Link href={`/insight/${blog.id}`}>
               <div className={`relative w-full image-container`}>
                 <Image
                   src={blog.src}
@@ -35,8 +35,8 @@ const Insight = () => {
                   {blog.date}
                 </p>
               </div>
-          </Link>
-            </div>
+            </Link>
+          </div>
         ))}
       </div>
       <div className="hidden lg:block lg:absolute lg:bottom-0 bg-black h-1/2 z-[-1] w-full"></div>

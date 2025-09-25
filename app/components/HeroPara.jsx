@@ -46,7 +46,7 @@ const HeroPara = () => {
       yPercent: 100,
       delay: 0.2,
       duration: 0.8,
-      ease: "power2.inOut",
+      ease: "power3.in",
     });
   }, []);
 
