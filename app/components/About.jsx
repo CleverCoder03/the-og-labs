@@ -1,12 +1,13 @@
 import React from "react";
 import Button from "./Button";
+import Link from "next/link";
 
 const About = () => {
   return (
     <div className="bg-white">
       <div className="mt-10 md:mt-15 lg:mt-18">
         <h2 className="text-center md:text-xl">The OG Lab Story</h2>
-        <p className="text-4xl md:text-5xl  font-poppins-medium text-center mt-5">
+        <p className="text-3xl md:text-5xl  font-poppins-medium text-center mt-5">
           About Us
         </p>
       </div>
@@ -25,10 +26,12 @@ const About = () => {
         </div>
 
         <div className="text-center mt-10">
-          <Button
-            tag={"Learn More"}
-            className={`bg-black text-white align-middle`}
-          />
+          <Link href="/about">
+            <Button
+              tag={"Learn More"}
+              className={`bg-black text-white align-middle`}
+            />
+          </Link>
         </div>
       </div>
     </div>

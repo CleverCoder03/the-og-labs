@@ -1,5 +1,18 @@
+import Link from "next/link";
 import React from "react";
 import Marquee from "react-fast-marquee";
+
+const pageLinks = [
+  {id: 1, label: "About Us", link: "/about"},
+  {id: 2, label: "Services", link: "/services"},
+  {id: 3, label: "Contact us", link: "/contact"}
+]
+
+const socailLinks = [
+  {id: 1, label: "Linkedin", link: "https://"},
+  {id: 2, label: "Instagram", link: "https://"},
+  {id: 3, label: "Twitter", link: "https://"}
+]
 
 const Footer = () => {
   return (
@@ -12,24 +25,32 @@ const Footer = () => {
           <div className="hidden mt-10 font-poppins-regular lg:block lg:mt-0">
           <h2 className="text-black/50 font-bold text-lg">Menu</h2>
           <ul className="mt-2 lg:mt-4 lg:flex lg:flex-col lg:gap-2">
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Conntact Us</li>
+            {
+              pageLinks.map((page) => (
+                <Link key={page.id} href={page.link}>
+                  <li>{page.label}</li>
+                </Link>
+              ))
+            }
           </ul>
         </div>
         <div className="mt-10 font-poppins-regular lg:mt-0">
           <h2 className="text-black/50 font-bold text-lg">Social</h2>
           <ul className="mt-2 lg:mt-4 lg:flex lg:flex-col lg:gap-2">
-            <li>Linkedin</li>
-            <li>Instagram</li>
-            <li>Twitter</li>
+            {
+              socailLinks.map((social) => (
+                <a key={social.id} href={social.link} target="_blank" rel="noopener noreferrer">
+                  {social.label}
+                </a>
+              ))
+            }
           </ul>
         </div>
         </div>
         <div>
           <div className="mt-10 font-poppins-regular lg:mt-0">
           <h2 className="text-black/50 font-bold text-lg">Business Enquires</h2>
-          <h1 className="mt-2">hii@theoglabs.com</h1>
+          <h1 className="mt-2">cheers@theoglabs.com</h1>
         </div>
         <div className="mt-10 font-poppins-regular">
           <h2 className="text-black/50 font-bold text-lg">Join Our Team</h2>

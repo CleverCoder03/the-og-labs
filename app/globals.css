@@ -216,6 +216,28 @@ html {
   padding: 0;
 }
 
+.insightCards .image-container{
+    height: 15rem !important;
+  }
+
+@media  screen and (min-width: 767px) {
+  .insightCards .image-container{
+    height: 22rem !important;
+  }
+}
+
+@media  screen and (min-width: 1024px) {
+  .insightCards:nth-child(1) .image-container{
+    height: 30vw !important;
+  }
+  .insightCards:nth-child(2) .image-container{
+    height: 20vw !important;
+  }
+  .insightCards:nth-child(3) .image-container{
+    height: 24vw !important;
+  }
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -287,6 +309,9 @@ html {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --sm-heihgt: 20vw;
+  --md-heihgt: 24vw;
+  --lg-heihgt: 30vw;
 }
 
 .dark {

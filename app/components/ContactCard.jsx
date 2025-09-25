@@ -9,7 +9,7 @@ const ContactCard = () => {
             <div className="flex flex-col lg:flex-row gap-15 lg:w-1/2">
                 <div className="lg:flex lg:flex-col lg:w-[22vw] lg:justify-end">
                     <h2 className="font-poppins-semibold">Email</h2>
-                    <h3>help@theoglabs.com</h3>
+                    <h3>cheers@theoglabs.com</h3>
                     <p className="text-white/80 mt-4 lg:mt-8">Assistance hours: <br /> Monday - Friday 6 am to 8 pm EST</p>
                 </div>
                 <div className="lg:flex lg:flex-col lg:w-[22vw] lg:justify-end">

@@ -11,15 +11,15 @@ export function ServiceCard({title, desc, bgCoverImg, serviceImg}) {
         <Image src={bgCoverImg} alt="service-1-bg" className="rounded-xl" fill />
       </div>
       <CardBody
-        className="relative group/card  w-[22rem] p-6">
+        className="relative group/card  w-[20rem] p-6">
         <CardItem
           translateZ="50"
           className="text-base font-poppins-regular text-white">
           {title}
         </CardItem>
         
-        <CardItem translateZ="100" className="size-full mt-4">
-          <div className="h-55 bg-white w-fit opacity-70 my-15 mix-blend-plus-lighter">
+        <CardItem translateZ="100" className="size-full mt-5">
+          <div className="h-40 bg-white w-fit opacity-70 my-15 mix-blend-plus-lighter">
             <Image src={serviceImg} className="object-contain" alt="spring" fill />
           </div>
         </CardItem>

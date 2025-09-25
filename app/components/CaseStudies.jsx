@@ -25,7 +25,7 @@ const CaseStudies = () => {
     <div className="">
       <div className="bg-white mt-10 md:mt-15 lg:mt-18">
         <h2 className="text-center md:text-xl">Our Portfolio</h2>
-        <p className="text-4xl md:text-5xl font-poppins-medium text-center mt-5">
+        <p className="text-3xl md:text-5xl font-poppins-medium text-center mt-5">
           Case Studies
         </p>
       </div>

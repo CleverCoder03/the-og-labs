@@ -46,7 +46,7 @@ const ServicePage = () => {
       <IntroPara
         title={introTitle}
         para={introPara}
-        className={"lg:w-[65%] xl:w-[45%]"}
+        // className={"lg:w-[65%] xl:w-[45%]"}
         button={<Button tag={"Contact Us"} className={"bg-black text-white"} />}
       />
       <section className="font-sans mt-10 lg:mt-12 xl:mt-15">

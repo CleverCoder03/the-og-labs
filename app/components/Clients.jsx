@@ -14,7 +14,7 @@ const Clients = () => {
     <div className="bg-white py-10">
       <div className="mt-10 px-6">
         <h2 className="text-center md:text-xl">Our Client's</h2>
-        <p className="text-4xl md:text-5xl font-poppins-medium text-center mt-5">
+        <p className="text-3xl md:text-5xl font-poppins-medium text-center mt-5">
           The Brand That Trusts Us
         </p>
       </div>

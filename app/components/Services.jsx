@@ -30,7 +30,6 @@ const Services = () => {
         end: `+=${scrollDistance}`,
         scrub: true,
         pin: true,
-        anticipatePin: 1,
       },
     });
   }, []);
@@ -41,7 +40,7 @@ const Services = () => {
       className="bg-[#0E0652] mt-20 lg:mt-30 text-white py-10 md:py-15 lg:py-18"
     >
       <h2 className="text-center md:text-xl">Our Services</h2>
-      <h1 className="text-center text-4xl md:text-5xl mt-5 font-poppins-medium">Our Core Services</h1>
+      <h1 className="text-center text-3xl md:text-5xl mt-5 font-poppins-medium">Our Core Services</h1>
       <div ref={containerRef} className="flex justify-around w-[400vw] md:w-[300vw] lg:w-[200vw] xl:w-[100vw]">
         {services.map(({id, title, desc, bgCoverImg, serviceImg})=>(
           <ServiceCard key={id} title={title} desc={desc} bgCoverImg={bgCoverImg} serviceImg={serviceImg} />

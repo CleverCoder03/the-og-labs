@@ -9,7 +9,7 @@ export default function Loader({ onFinish }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
-        const next = prev + Math.random() * 20; // simulate progress
+        const next = prev + Math.random() * 40; // simulate progress
         return next >= 100 ? 100 : next;
       });
     }, 200);

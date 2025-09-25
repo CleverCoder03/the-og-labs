@@ -7,9 +7,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { motion } from "motion/react";
+import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
   const imageRef = useRef();
+  const isMobile = useMediaQuery({maxWidth: 767})
 
   useGSAP(() => {
     gsap.registerPlugin(SplitText);
@@ -129,30 +131,30 @@ const Hero = () => {
       <div className="absolute top-0 left-0 h-screen w-screen flex justify-between items-center md:px-[10vw] overflow-hidden">
         <motion.div
         id="knot"
-          className="relative top-[180px] hidden md:inline mix-blend-plus-lighter"
+          className="relative top-[180px] md:inline mix-blend-plus-lighter"
           drag
-          // dragSnapToOrigin
+          dragSnapToOrigin
         >
           <Image
             src="/knot3.png"
-            alt="cursor"
-            height="200"
-            width="200"
+            alt="object_1"
+            height={isMobile ? "150" : "200"}
+            width={isMobile ? "150" : "200"}
             className="max-w-none animatedImg"
             draggable="false"
           />
         </motion.div>
         <motion.div
         id="spring"
-          className="relative -top-[260px] hidden md:inline mix-blend-plus-lighter"
+          className="relative -top-[260px] md:inline mix-blend-plus-lighter"
           drag
-          // dragSnapToOrigin
+          dragSnapToOrigin
         >
           <Image
             src="/spring.png"
-            alt="message"
-            height="200"
-            width="200"
+            alt="object_2"
+            height={isMobile ? "150" : "200"}
+            width={isMobile ? "150" : "200"}
             className="max-w-none animatedImg"
             draggable="false"
           />
@@ -163,7 +165,7 @@ const Hero = () => {
         <div className="mt-10 lg:mt-20">
           <h1
             id="title"
-            className="text-white transition-all duration-200 font-playfair-regular text-[3.7rem] md:text-7xl lg:text-[6vw] lg:w-[80vw]  text-start md:text-center leading-[1.3] px-6"
+            className="text-white transition-all duration-200 font-playfair-regular text-[2.5rem] md:text-7xl lg:text-[6vw] lg:w-[80vw] text-center leading-[1.3] px-6"
           >
             The OG Labs, Redefining Digital Marketing with AI
           </h1>
@@ -173,7 +175,7 @@ const Hero = () => {
         </div>
         <div id="hero-button" className="mt-20">
           <Link href="/contact">
-            <div className="bg-white/90 backdrop-blur-md text-black p-4 font-poppins-medium flex items-start gap-2">
+            <div className="bg-white/90 backdrop-blur-md text-black py-3 px-4 font-poppins-medium flex items-start gap-2 text-sm">
               Start Your AI-Powered Journey <MoveRight />
             </div>
           </Link>

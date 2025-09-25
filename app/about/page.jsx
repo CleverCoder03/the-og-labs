@@ -48,7 +48,7 @@ const AboutPage = () => {
       <IntroPara
         title={introTitle}
         para={introPara}
-        className={"lg:w-[80%] xl:w-[75%]"}
+        // className={"lg:w-[80%] xl:w-[75%]"}
       />
       <div className="relative">
         <Marquee>

@@ -43,8 +43,9 @@ const HeroPara = () => {
 
     tl.from(buttonRef.current, {
       opacity: 0,
-      yPercent: 300,
-      duration: 0.4,
+      yPercent: 100,
+      delay: 0.2,
+      duration: 0.8,
       ease: "power2.inOut",
     });
   }, []);
@@ -52,21 +53,21 @@ const HeroPara = () => {
   return (
     <div>
       <div ref={sectionRef} className="bg-white mt-20 px-6 md:px-10 lg:px-15">
-        <div className="font-poppins-medium text-3xl flex items-center">
-          <div className="leading-[1.3] lg:leading-[1.7] xl:leading-[2.3]">
-            <span className="pr-10 text-base uppercase font-poppins-regular align-middle hidden md:inline lg:text-xl">
+        <div className="font-poppins-medium text-3xl flex items-center justify-center">
+          <div className="leading-[1.3] lg:leading-[1.7] xl:leading-[2.3] flex flex-col gap-5 items-center">
+            <span className="pr-10 text-base uppercase font-poppins-regular align-middle lg:text-xl">
               The og lab
             </span>
-            <span
+            <p
               ref={paraRef}
-              className="mr-4 align-middle lg:text-4xl xl:text-5xl w-full"
+              className="mr-4 align-middle text-center text-2xl lg:text-4xl xl:text-5xl w-full"
             >
               AI-powered, programmatic-first marketing built for brands that
               want to scale smarter. We merge automation, creativity, and
               strategy to maximize ROI and unlock measurable growth.
-            </span>
+            </p>
             <span ref={buttonRef}>
-              <Link href="/about">
+                <Link href="/about">
                 <Button
                   tag={`Learn More`}
                   className={`bg-black text-white align-middle`}

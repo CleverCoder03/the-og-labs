@@ -58,10 +58,10 @@ const Testimonial = () => {
   return (
     <div className="bg-white relative mt-10 md:mt-15 lg:mt-18">
       <h2 className="text-center md:text-xl">Testimonials</h2>
-      <h1 className="text-center text-4xl md:text-5xl font-poppins-medium mt-5">
+      <h1 className="text-center text-3xl md:text-5xl font-poppins-medium mt-5">
         Trusted by Industry Leaders
       </h1>
-      <div className="bg-black text-white mt-10 md:mt-15 lg:mt-18 py-20 md:py-25 lg:py-30 px-6 md:px-10 lg:px-15">
+      <div className="bg-black text-white mt-10 md:mt-15 lg:mt-18 py-15 md:py-22 lg:py-26 px-6 md:px-10 lg:px-15">
         <div className="flex flex-col gap-15 lg:gap-10">
           <div className="relative size-10 lg:size-15">
             <Image src="/d-quote.png" alt="double-quote" fill />
