@@ -14,6 +14,7 @@ import Process from "./components/Process";
 import Services from "./components/Services";
 import Testimonial from "./components/Testimonial";
 import Loader from "./components/Loader";
+import TestNavbar from "./components/TestNavbar";
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -23,6 +24,7 @@ export default function Home() {
       {loaded && (
         <main>
           <Navbar />
+          {/* <TestNavbar /> */}
           <Hero />
           <HeroPara />
           <Services />

@@ -20,7 +20,7 @@ const TestNavbar = () => {
   const [toggle, setToggle] = useState(false);
   const [halfScroll, setHalfScroll] = useState(false);
   const navRef = useRef(null);
-  const navLinksRef = useRef([]);
+  const navLinksRef = useRef([])
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   // const pathname = usePathname()
@@ -35,9 +35,10 @@ const TestNavbar = () => {
     }
   }, [currentScolllY]);
 
-  useGSAP(() => {
-    if (toggle) {
-      gsap.fromTo(
+  useGSAP(()=>{
+
+    if(toggle){
+        gsap.fromTo(
         navLinksRef.current,
         {
           yPercent: 100,
@@ -51,9 +52,9 @@ const TestNavbar = () => {
           delay: 0.5,
           stagger: 0.2, // 0.2s delay between each link
         }
-      );
+      )
     } else {
-      gsap.fromTo(
+        gsap.fromTo(
         navLinksRef.current,
         {
           yPercent: 0,
@@ -65,9 +66,9 @@ const TestNavbar = () => {
           duration: 0.4,
           ease: "expo.out",
         }
-      );
+      )
     }
-  }, [toggle]);
+  }, [toggle])
 
   const navVariants = {
     initial: {
@@ -101,12 +102,9 @@ const TestNavbar = () => {
   const animationState = !isMobile && halfScroll ? "scrolled" : "initial";
   return (
     <div className="fixed z-50 w-full h-20 inset-0 border-none transition-all duration-700">
-      <motion.div
-        initial={{ y: -500 }}
+      <motion.div initial={{ y: -500 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6, ease: "easeInOut" }}
-        className="absolute z-50 top-0 left-0 h-full w-full flex justify-center items-center px-2 md:px-10 lg:px-15"
-      >
+        transition={{ duration: 0.8, delay: 0.6, ease: "easeInOut" }} className="absolute z-50 top-0 left-0 h-full w-full flex justify-center items-center px-2 md:px-10 lg:px-15">
         <motion.div
           variants={navVariants}
           animate={animationState}
@@ -118,7 +116,7 @@ const TestNavbar = () => {
         >
           <div>
             <h1 className="uppercase font-michroma-regular text-gray-50">
-              <Link href="/">THE OG LAB</Link>
+              THE OG LAB
             </h1>
           </div>
 
@@ -176,13 +174,13 @@ const TestNavbar = () => {
               ))}
             </div>
             <div className="mt-25 flex items-end justify-between w-full">
-              <div className="text-white/60">
-                <h1>Based in</h1>
-                <h1>Pune, India</h1>
-              </div>
-              <div className="text-right text-white/60">
-                <h1>cheers@theoglabs.com</h1>
-              </div>
+                <div className="text-white/60">
+                    <h1>Based in</h1>
+                    <h1>Pune, India</h1>
+                </div>
+                <div className="text-right text-white/60">
+                    <h1>cheers@theoglabs.com</h1>
+                </div>
             </div>
           </div>
         </div>

@@ -44,7 +44,7 @@ const Impact = () => {
         <Link href="/services">
           <Button
             tag={"Learn More"}
-            className={"bg-white text-black font-bold"}
+            className={"bg-white text-black font-bold rounded-md shadow-2xl"}
           />
         </Link>
       </div>
@@ -52,7 +52,7 @@ const Impact = () => {
         {impactCards.map((impact) => (
           <div
             key={impact.id}
-            className={`w-full mt-10 p-5 lg:py-10 lg:px-7`}
+            className={`w-full mt-10 p-5 lg:py-10 lg:px-7 rounded-md shadow-2xl`}
             style={{ backgroundColor: impact.bgColor }}
           >
             <h1 className="font-poppins-medium text-lg lg:text-xl xl:text-2xl">

@@ -32,7 +32,7 @@ const Process = () => {
       </div>
       <div className="mt-10 md:mt-15 lg:mt-18 pb-10 lg:pb-0 flex flex-col gap-6 lg:gap-10 xl:gap-15 lg:flex-row lg:justify-between lg:w-full px-6 lg:px-0">
         {processes.map((process) => (
-          <div key={process.id} className="bg-[#0C0070] p-4 flex flex-col justify-between gap-8 lg:gap-30 xl:gap-40 lg:w-1/4">
+          <div key={process.id} className="bg-[#0C0070] p-4 flex flex-col justify-between gap-8 lg:gap-30 xl:gap-40 lg:w-1/4 rounded-md shadow-2xl">
             <div className="font-poppins-semibold">
               <h1>{process.id}</h1>
               <h1>{process.name}</h1>

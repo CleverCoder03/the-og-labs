@@ -29,7 +29,7 @@ const About = () => {
           <Link href="/about">
             <Button
               tag={"Learn More"}
-              className={`bg-black text-white align-middle`}
+              className={`bg-black text-white align-middle shadow-2xl rounded-md`}
             />
           </Link>
         </div>

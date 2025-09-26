@@ -1,8 +1,8 @@
 import Contact from "@/app/components/Contact";
 import Footer from "@/app/components/Footer";
 import InsightHeroImage from "@/app/components/InsightHeroImage";
+import InsightPara from "@/app/components/InsightPara";
 import Navbar from "@/app/components/Navbar";
-import Testimonial from "@/app/components/Testimonial";
 import { blogs } from "@/lib";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
@@ -55,11 +55,7 @@ const page = async ({ params }) => {
           </div>
 
           <div className="mt-30 flex flex-col justify-center items-center">
-            <div className="text-center w-90 font-playfair-regular md:text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-              consequatur iste, maxime eius modi corporis aperiam unde illo.
-              Enim, temporibus!
-            </div>
+            <InsightPara />
 
             <InsightHeroImage src={insight.src} />
           </div>

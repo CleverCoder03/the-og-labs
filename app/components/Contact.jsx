@@ -22,7 +22,7 @@ const Contact = () => {
         <Link href="/contact">
           <Button
           tag={"Start Your Project"}
-          className={"bg-white text-black font-poppins-medium"}
+          className={"bg-white text-black font-poppins-medium rounded-md shadow-2xl"}
         />
         </Link>
       </div>

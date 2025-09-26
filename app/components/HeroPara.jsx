@@ -70,7 +70,7 @@ const HeroPara = () => {
                 <Link href="/about">
                 <Button
                   tag={`Learn More`}
-                  className={`bg-black text-white align-middle`}
+                  className={`bg-black text-white align-middle rounded-md shadow-2xl`}
                 />
               </Link>
             </span>
