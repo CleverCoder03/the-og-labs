@@ -18,11 +18,11 @@ const page = async ({ params }) => {
   const paragraphs = insight.content.split("\n\n");
 
   return (
-    <div>
+    <div className="">
       <Navbar />
-      <div className="w-dvw">
+      <div className="w-dvw bg-black">
         <div className="h-full w-full">
-          <div className="pt-30 lg:pt-35 text-8xl lg:text-9xl leading-[1.8] align-middle tracking-wider font-poppins-bold-italic">
+          <div className="pt-30 lg:pt-35 text-8xl lg:text-9xl leading-[1.8] align-middle tracking-wider font-poppins-bold-italic text-white">
             <Marquee>
               Insight{" "} 
               <div className="relative size-30 lg:size-40">
@@ -61,7 +61,7 @@ const page = async ({ params }) => {
           </div>
 
           <div className="flex flex-col items-center">
-            <div className="px-6 md:px-10 lg:w-[70vw] w-full">
+            <div className="px-6 md:px-10 lg:w-[70vw] w-full text-white">
               <div className="my-10 lg:my-20">
                 <div>
                   <p className="text-gray-500 text-sm">{insight.date}</p>

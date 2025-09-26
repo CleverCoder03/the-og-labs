@@ -24,7 +24,7 @@ const InsightPara = () => {
   return (
     <div
       ref={insightPara}
-      className="text-center w-90 font-playfair-regular md:text-lg"
+      className="text-center w-90 font-playfair-regular md:text-lg text-white"
     >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque consequatur
       iste, maxime eius modi corporis aperiam unde illo. Enim, temporibus!
