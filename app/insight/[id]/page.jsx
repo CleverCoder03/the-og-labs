@@ -24,7 +24,7 @@ const page = async ({ params }) => {
         <div className="h-full w-full">
           <div className="pt-30 lg:pt-35 text-8xl lg:text-9xl leading-[1.8] align-middle tracking-wider font-poppins-bold-italic">
             <Marquee>
-              Insight{" "}
+              Insight{" "} 
               <div className="relative size-30 lg:size-40">
                 <Image
                   src="/bubble-1.png"
@@ -34,7 +34,7 @@ const page = async ({ params }) => {
                 />
               </div>
               Insight{" "}
-              <div className="relative lg:size-40">
+              <div className="relative size-30 lg:size-40">
                 <Image
                   src="/bubble-2.png"
                   alt="insight-object"
@@ -43,7 +43,7 @@ const page = async ({ params }) => {
                 />
               </div>
               Insight{" "}
-              <div className="relative lg:size-40">
+              <div className="relative size-30 lg:size-40">
                 <Image
                   src="/bubble-3.png"
                   alt="insight-object"
