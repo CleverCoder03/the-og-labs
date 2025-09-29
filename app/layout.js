@@ -3,7 +3,7 @@ import AnimatePresenceWrapper from "./components/AnimatePresenceWrapper";
 
 export const metadata = {
   title: "The OG Lab",
-  description: "A marketing agency i the age of AI",
+  description: "A marketing agency in the age of AI",
 };
 
 export default function RootLayout({ children }) {
