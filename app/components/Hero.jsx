@@ -101,8 +101,8 @@ const Hero = () => {
           // markers: true
         },
       })
-      .to("#spring", { y: 300 }, 0)
-      .to("#knot", { y: 300 }, 0);
+      .to("#spring", { y: 100 }, 0)
+      .to("#knot", { y: 100 }, 0);
 
       gsap
       .timeline({
@@ -147,8 +147,6 @@ const Hero = () => {
         <motion.div
         id="knot"
           className="relative top-[180px] md:inline mix-blend-plus-lighter"
-          drag
-          dragSnapToOrigin
         >
           <Image
             src="/knot3.png"
@@ -162,8 +160,6 @@ const Hero = () => {
         <motion.div
         id="spring"
           className="relative -top-[230px] md:inline mix-blend-plus-lighter"
-          drag
-          dragSnapToOrigin
         >
           <Image
             src="/spring.png"

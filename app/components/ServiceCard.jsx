@@ -11,7 +11,7 @@ export function ServiceCard({title, desc, bgCoverImg, serviceImg}) {
         <Image src={bgCoverImg} alt="service-1-bg" className="rounded-xl" fill />
       </div>
       <CardBody
-        className="relative group/card  w-[20rem] p-6">
+        className="relative group/card w-[18rem] h-full sm:w-[20rem] p-3 py-6 md:p-6">
         <CardItem
           translateZ="50"
           className="text-base font-poppins-regular text-white">
@@ -19,7 +19,7 @@ export function ServiceCard({title, desc, bgCoverImg, serviceImg}) {
         </CardItem>
         
         <CardItem translateZ="100" className="size-full mt-5">
-          <div className="h-40 bg-white w-fit opacity-70 my-15 mix-blend-plus-lighter">
+          <div className="relative h-40 w-full opacity-70 my-15 mix-blend-plus-lighter">
             <Image src={serviceImg} className="object-contain" alt="spring" fill />
           </div>
         </CardItem>

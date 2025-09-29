@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
         <div className="mt-10 font-poppins-regular lg:mt-0">
           <h2 className="text-black/50 font-bold text-lg">Social</h2>
-          <ul className="mt-2 lg:mt-4 lg:flex lg:flex-col lg:gap-2">
+          <ul className="mt-2 lg:mt-4 flex flex-col gap-2">
             {
               socailLinks.map((social) => (
                 <a key={social.id} href={social.link} target="_blank" rel="noopener noreferrer">
@@ -52,10 +52,10 @@ const Footer = () => {
           <h2 className="text-black/50 font-bold text-lg">Business Enquires</h2>
           <h1 className="mt-2">cheers@theoglabs.com</h1>
         </div>
-        <div className="mt-10 font-poppins-regular">
+        {/* <div className="mt-10 font-poppins-regular">
           <h2 className="text-black/50 font-bold text-lg">Join Our Team</h2>
           <h1 className="mt-2">apply@theoglabs.com</h1>
-        </div>
+        </div> */}
         </div>
       </div>
 

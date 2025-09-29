@@ -116,7 +116,7 @@ const Testimonial = () => {
               return (
                 <button
                   key={client.id}
-                  className={`w-full border py-5 ${
+                  className={`cursor-pointer w-full border py-5 ${
                     isActive ? "bg-white" : "text-white/50 border-white/50"
                   }`}
                   onClick={() => goToSlide(index)}

@@ -128,7 +128,7 @@ const TestNavbar = () => {
                 className={`text-6xl uppercase gap-4 text-white md:text-base md:capitalize md:ml-4 md:underline-none`}
                 key={link.label}
                 href={link.href}
-                onClick={() => setToggle(!toggle)}
+                // onClick={() => setToggle(!toggle)}
               >
                 {link.label}
               </Link>

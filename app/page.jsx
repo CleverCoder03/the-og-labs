@@ -1,4 +1,5 @@
 "use client";
+import { ReactLenis, useLenis } from 'lenis/react'
 import { useState } from "react";
 import About from "./components/About";
 import CaseStudies from "./components/CaseStudies";
@@ -15,11 +16,13 @@ import Services from "./components/Services";
 import Testimonial from "./components/Testimonial";
 import Loader from "./components/Loader";
 import TestNavbar from "./components/TestNavbar";
+import Slider from './components/Swiper';
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
   return (
     <>
+    {/* <ReactLenis root /> */}
       {!loaded && <Loader onFinish={() => setLoaded(true)} />}
       {loaded && (
         <main>
@@ -27,7 +30,8 @@ export default function Home() {
           {/* <TestNavbar /> */}
           <Hero />
           <HeroPara />
-          <Services />
+          {/* <Services /> */}
+          <Slider />
           <Testimonial />
           <About />
           <Process />
