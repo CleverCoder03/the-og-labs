@@ -53,8 +53,8 @@ const ContactPage = () => {
       </div>
       <div className="py-10 lg:py-15 xl:py-18 px-6 md:px-10 lg:px-15">
         <form action="">
-          <div className="flex flex-col gap-10 lg:flex-row lg:w-full lg:justify-between">
-            <div className="lg:w-1/3">
+          <div className="flex flex-col gap-10 lg:w-full lg:justify-center lg:items-center">
+            <div className="lg:w-1/2">
               <div className="border-b pb-5">
                 <input
                   type="text"
@@ -65,7 +65,7 @@ const ContactPage = () => {
               </div>
             </div>
             <PhoneNumberInput />
-            <div className="lg:w-1/3">
+            <div className="lg:w-1/2">
               <div className="border-b pb-5">
                 <input
                   type="email"
@@ -75,8 +75,7 @@ const ContactPage = () => {
                 />
               </div>
             </div>
-          </div>
-          <div className="mt-10">
+            <div className="lg:w-1/2">
             <div className="border-b pb-5">
               <textarea
                 name=""
@@ -86,9 +85,12 @@ const ContactPage = () => {
               ></textarea>
             </div>
           </div>
-          <div className="mt-10">
+          <div className="mt-10 lg:w-1/2 lg:text-center">
             <Button type={"submit"} tag={"Leave us a message"} className={"bg-black text-white"} />
           </div>
+          </div>
+          
+          
         </form>
       </div>
       <ContactCard />

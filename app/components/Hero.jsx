@@ -146,7 +146,7 @@ const Hero = () => {
       <div className="absolute top-0 left-0 h-screen w-screen flex justify-between items-center md:px-[10vw] overflow-hidden">
         <motion.div
         id="knot"
-          className="relative top-[180px] md:inline mix-blend-plus-lighter"
+          className="relative top-[200px] md:inline mix-blend-plus-lighter"
         >
           <Image
             src="/knot3.png"
@@ -176,9 +176,9 @@ const Hero = () => {
         <div className="mt-10 lg:mt-50">
           <h1
             id="title"
-            className="text-white transition-all duration-200 font-playfair-regular text-[2.5rem] md:text-7xl lg:text-[6vw] lg:w-[80vw] text-center leading-[1.3] px-6"
+            className="text-white transition-all duration-200 font-playfair-regular text-[2.3rem] md:text-5xl lg:text-[5.1vw] lg:w-[80vw] text-center leading-[1.15] px-6"
           >
-            The OG Labs, Redefining Digital Marketing with AI
+            The OG Labs, We Help Brands Grow Smarter in a Programmatic World
           </h1>
           <p className="hidden md:block text-white text-xl text-center font-poppins-regular mt-10">
             Where Intelligence Meets Imagination
@@ -187,7 +187,7 @@ const Hero = () => {
         <div id="hero-button" className="mt-20">
           <Link href="/contact">
             <div className="bg-white/90 backdrop-blur-md text-black py-3 px-4 font-poppins-medium flex items-start gap-2 text-sm align-middle shadow-2xl rounded-md">
-              Start Your AI-Powered Journey <MoveRight />
+              Your Vision. Our Strategy. Let’s Create Impact <MoveRight />
             </div>
           </Link>
         </div>

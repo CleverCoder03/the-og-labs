@@ -11,34 +11,42 @@ import Button from "../components/Button";
 const sectionsData = [
   {
     id: 1,
-    title: "Programmatic Advertising & SEM",
+    title: "Programmatic Media Buying & Services",
     description:
-      "End-to-end campaign management across video, display, and native with real-time bidding, advanced targeting, and dynamic optimization to maximize ROI.",
+      "Maximize efficiency and impact with our end-to-end programmatic media solutions. We leverage real-time bidding, advanced targeting, and AI-driven platforms to deliver the right message to the right audience at the right time — across display, video, native, OTT, and more.",
     imageSrc: "/service-1.png",
     backgroundColor: "bg-[#17105F]", // Dark blue
   },
   {
     id: 2,
-    title: "Retail Media",
+    title: "Content & Creative Designing",
     description:
-      "Boost visibility and sales on Amazon, Walmart, eBay, Target, and more with product campaigns, sponsored listings, seasonal promotions, and listing optimization.",
+      "Stand out in the scroll. Our creative team merges data insights with bold visual storytelling to develop content that grabs attention and drives action — across formats, platforms, and audiences.",
     imageSrc: "/service-2.png",
     backgroundColor: "bg-[#314352]", // Dark grayish-blue
   },
   {
     id: 3,
-    title: "Programmatic Advertising & SEM",
+    title: "Brand Strategy & Positioning",
     description:
-      "End-to-end campaign management across video, display, and native with real-time bidding, advanced targeting, and dynamic optimization to maximize ROI.",
+      "Your brand is more than a logo — it’s your voice, your value, and your edge. We help brands define their narrative, align with their audience, and differentiate in crowded markets through insight-driven brand strategy.",
     imageSrc: "/service-3.png",
     backgroundColor: "bg-[#6A53B7]", // Purple
+  },
+  {
+    id: 4,
+    title: "Social Media & Performance Marketing",
+    description:
+      "Drive conversions and build communities through social-first performance campaigns. From paid social to influencer collaborations, we align strategy with performance metrics to deliver full-funnel success.",
+    imageSrc: "/service-4.png",
+    backgroundColor: "bg-[#d9a641]", // Purple
   },
 ];
 
 const ServicePage = () => {
   const introTitle = "What we Provide";
   const introPara =
-    "We provide end-to-end, AI-powered digital marketing solutions that cover every stage of the customer journey.";
+    "At OG Labs, we provide a comprehensive suite of services designed to amplify your brand’s reach, performance, and impact. Whether you need cutting-edge programmatic solutions or compelling creative, we build data-powered strategies tailored for results.";
   return (
     <div>
       <Navbar />

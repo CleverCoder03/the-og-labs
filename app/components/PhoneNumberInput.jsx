@@ -8,7 +8,7 @@ const PhoneNumberInput = () => {
   };
 
   return (
-    <div className="lg:w-1/3">
+    <div className="lg:w-1/2">
       <div className="border-b pb-5">
         <input
           type="text"
