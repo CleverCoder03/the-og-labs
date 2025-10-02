@@ -161,11 +161,12 @@ const TestNavbar = () => {
         className="absolute h-dvh w-dvw left-0 bg-[#1e184d]"
       >
         <div className="h-full w-full">
-          <div className="absolute w-full bottom-0 px-6 pb-10">
-            <div className="flex flex-col gap-4">
+          <div className="absolute w-full h-full px-6 pb-10">
+            <div className="h-full w-full flex justify-center items-center">
+              <div className="flex flex-col gap-4">
               {navLinks.map((link, index) => (
                 <Link
-                  className={`text-6xl uppercase gap-4 text-white md:text-base md:capitalize md:ml-4 md:underline-none`}
+                  className={`text-3xl uppercase gap-4 text-white md:text-base md:capitalize md:ml-4 md:underline-none text-center`}
                   key={link.label}
                   href={link.href}
                   ref={(el) => (navLinksRef.current[index] = el)}
@@ -175,7 +176,8 @@ const TestNavbar = () => {
                 </Link>
               ))}
             </div>
-            <div className="mt-25 flex items-end justify-between w-full">
+            </div>
+            <div className="-mt-10 flex items-end justify-between w-full">
               <div className="text-white/60">
                 <h1>Based in</h1>
                 <h1>Pune, India</h1>
