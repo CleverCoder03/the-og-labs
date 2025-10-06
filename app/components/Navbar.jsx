@@ -112,7 +112,7 @@ const TestNavbar = () => {
           animate={animationState}
           transition={{ duration: 0.2, ease: "easeInOut" }}
           ref={navRef}
-          className={`flex justify-between items-center w-full px-3 py-3 rounded-md transition-all duration-300 ${
+          className={`flex justify-between items-center w-full px-3 py-3 rounded-sm transition-all duration-300 ${
             isMobile && halfScroll ? "bg-[#1e184d]" : ""
           }`}
         >
@@ -178,11 +178,11 @@ const TestNavbar = () => {
             </div>
             </div>
             <div className="-mt-10 flex items-end justify-between w-full">
-              <div className="text-white/60">
+              {/* <div className="text-white/60">
                 <h1>Based in</h1>
                 <h1>Pune, India</h1>
-              </div>
-              <div className="text-right text-white/60">
+              </div> */}
+              <div className="text-center w-full text-white/60">
                 <h1>cheers@theoglabs.com</h1>
               </div>
             </div>

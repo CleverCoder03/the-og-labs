@@ -39,7 +39,7 @@ export default function Slider() {
         
         navigation={true}
         modules={[Navigation, Pagination]}
-        className="lg:!flex lg:!justify-center lg:!items-center !h-full"
+        className="lg:!flex lg:!justify-center lg:!items-center lg:!w-[70rem] !h-full"
       >
         {services.map(({ id, title, desc, bgCoverImg, serviceImg }) => (
           <SwiperSlide key={id} className="!bg-[#0E0652] py-10 ">

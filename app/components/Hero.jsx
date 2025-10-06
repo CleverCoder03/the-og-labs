@@ -66,14 +66,14 @@ const Hero = () => {
     tl.from(splitTitle.words, {
       opacity: 0,
       yPercent: 50,
-      stagger: 0.15,
+      stagger: 0.1,
       // onComplete: addColor,
     });
 
-    tl.from("#hero-button", {
+    gsap.from("#hero-button", {
       opacity: 0,
       yPercent: 200,
-      // delay: 1.7,
+      delay: 1,
     });
 
     tl.from("#knot", {
@@ -173,12 +173,12 @@ const Hero = () => {
       </div>
 
       <div className="h-screen w-full flex flex-col justify-center items-center">
-        <div className="mt-10 lg:mt-50">
+        <div className="mt-20  lg:mt-50">
           <h1
             id="title"
             className="text-white transition-all duration-200 font-playfair-regular text-[2.3rem] md:text-5xl lg:text-[5.1vw] lg:w-[80vw] text-center leading-[1.15] px-6"
           >
-            The OG Labs, We Help Brands Grow Smarter in a Programmatic World
+            We Help Brands Grow Smarter in a Programmatic World
           </h1>
           <p className="hidden md:block text-white text-xl text-center font-poppins-regular mt-10">
             Where Intelligence Meets Imagination
@@ -186,8 +186,8 @@ const Hero = () => {
         </div>
         <div id="hero-button" className="mt-20">
           <Link href="/contact">
-            <div className="bg-white/90 backdrop-blur-md text-black py-3 px-4 font-poppins-medium flex items-start gap-2 text-sm align-middle shadow-2xl rounded-md">
-              Your Vision. Our Strategy. Let’s Create Impact <MoveRight />
+            <div className="bg-white/90 backdrop-blur-md text-black py-3 px-4 font-poppins-medium flex items-center gap-2 text-sm align-middle shadow-2xl rounded-md">
+              Let’s Create Impact <MoveRight />
             </div>
           </Link>
         </div>

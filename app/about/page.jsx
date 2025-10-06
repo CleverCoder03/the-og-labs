@@ -97,9 +97,11 @@ const AboutPage = () => {
           ))}
         </div>
       </div>
-      <Process />
-      <Clients />
+      {/* <Process /> */}
+        <Clients />
+      <div className="mt-10">
       <Contact />
+      </div>
       <Footer />
     </div>
   );

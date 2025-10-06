@@ -85,7 +85,7 @@ const ContactPage = () => {
               ></textarea>
             </div>
           </div>
-          <div className="mt-10 lg:w-1/2 lg:text-center">
+          <div className="mt-10 lg:w-1/2 text-center">
             <Button type={"submit"} tag={"Leave us a message"} className={"bg-black text-white"} />
           </div>
           </div>

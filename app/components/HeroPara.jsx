@@ -52,7 +52,7 @@ const HeroPara = () => {
 
   return (
     <div>
-      <div ref={sectionRef} className="bg-white mt-20 px-6 md:px-10 lg:px-15">
+      <div ref={sectionRef} className="bg-white mt-20 px-6 md:px-10 lg:px-[10vw]">
         <div className="font-poppins-medium text-3xl flex items-center justify-center">
           <div className="leading-[1.3] lg:leading-[1.7] xl:leading-[2.3] flex flex-col gap-5 items-center">
             <span className="pr-10 text-base uppercase font-poppins-regular align-middle lg:text-xl">
@@ -60,7 +60,7 @@ const HeroPara = () => {
             </span>
             <p
               ref={paraRef}
-              className="mr-4 align-middle text-center text-2xl lg:text-4xl xl:text-5xl w-full"
+              className="mr-4 align-middle text-center text-2xl lg:text-3xl xl:text-4xl w-full lg:w-[70rem]"
             >
               AI-powered, programmatic-first marketing built for brands that
               want to scale smarter. We merge automation, creativity, and

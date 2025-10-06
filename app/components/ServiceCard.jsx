@@ -14,7 +14,7 @@ export function ServiceCard({title, desc, bgCoverImg, serviceImg}) {
         className="relative group/card w-[18rem] h-full sm:w-[20rem] p-3 py-6 md:p-6">
         <CardItem
           translateZ="50"
-          className="text-base font-poppins-regular text-white">
+          className="text-base font-semibold font-poppins-regular text-white">
           {title}
         </CardItem>
         

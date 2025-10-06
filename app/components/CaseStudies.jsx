@@ -29,8 +29,9 @@ const CaseStudies = () => {
           Case Studies
         </p>
       </div>
-      <div className="bg-white mt-5 px-6 md:px-10 lg:px-15 relative">
-        {caseStudiesData.map((caseStudy) => (
+      <div className="bg-white mt-5 px-6 md:px-10 lg:px-15 relative lg:flex lg:justify-center">
+        <div className="lg:w-[70rem]">
+          {caseStudiesData.map((caseStudy) => (
           <Link key={caseStudy.id} href={`/casestudy/${caseStudy.id}`}>
             <div
               className={`border-b relative transition-all duration-500 cursor-pointer ${
@@ -60,7 +61,7 @@ const CaseStudies = () => {
               </div>
 
               {/* Floating Image */}
-              {hoveredId === caseStudy.id && (
+              {/* {hoveredId === caseStudy.id && (
                 <Image
                   src={caseStudy.src} // Use the actual image source
                   alt={`case-study-${caseStudy.title}`}
@@ -76,10 +77,11 @@ const CaseStudies = () => {
                     transform: "translate(-50%, -50%)", // Center the image on the cursor
                   }}
                 />
-              )}
+              )} */}
             </div>
           </Link>
         ))}
+        </div>
       </div>
     </div>
   );

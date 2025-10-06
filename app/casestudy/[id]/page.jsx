@@ -41,13 +41,13 @@ const caseStudyPage = async ({ params }) => {
         headline={caseStudy.challenge.headline}
         points={caseStudy.challenge.points}
       />
-      <Approach
+      {/* <Approach
         headline={caseStudy.approach.headline}
         introText={caseStudy.approach.introText}
         steps={caseStudy.approach.steps}
-      />
-      <Results headline={caseStudy.results.headline} metrics={caseStudy.results.metrics} />
+      /> */}
       <Testimonial />
+      <Results headline={caseStudy.results.headline} metrics={caseStudy.results.metrics} />
       <CaseStudyContact />
       <Footer />
     </div>

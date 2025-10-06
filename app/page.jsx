@@ -17,6 +17,7 @@ import Testimonial from "./components/Testimonial";
 import Loader from "./components/Loader";
 import TestNavbar from "./components/TestNavbar";
 import Slider from './components/Swiper';
+import Impact2 from './components/Impact2';
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -34,9 +35,10 @@ export default function Home() {
           <Slider />
           <Testimonial />
           <About />
-          <Process />
+          {/* <Process /> */}
           <Clients />
-          <Impact />
+          {/* <Impact /> */}
+          <Impact2 />
           <CaseStudies />
           <Insight />
           <Contact />

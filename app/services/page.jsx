@@ -7,41 +7,7 @@ import Footer from "../components/Footer";
 import LandingBanner from "../components/LandingBanner";
 import IntroPara from "../components/IntroPara";
 import Button from "../components/Button";
-
-const sectionsData = [
-  {
-    id: 1,
-    title: "Programmatic Media Buying & Services",
-    description:
-      "Maximize efficiency and impact with our end-to-end programmatic media solutions. We leverage real-time bidding, advanced targeting, and AI-driven platforms to deliver the right message to the right audience at the right time — across display, video, native, OTT, and more.",
-    imageSrc: "/service-1.png",
-    backgroundColor: "bg-[#17105F]", // Dark blue
-  },
-  {
-    id: 2,
-    title: "Content & Creative Designing",
-    description:
-      "Stand out in the scroll. Our creative team merges data insights with bold visual storytelling to develop content that grabs attention and drives action — across formats, platforms, and audiences.",
-    imageSrc: "/service-2.png",
-    backgroundColor: "bg-[#314352]", // Dark grayish-blue
-  },
-  {
-    id: 3,
-    title: "Brand Strategy & Positioning",
-    description:
-      "Your brand is more than a logo — it’s your voice, your value, and your edge. We help brands define their narrative, align with their audience, and differentiate in crowded markets through insight-driven brand strategy.",
-    imageSrc: "/service-3.png",
-    backgroundColor: "bg-[#6A53B7]", // Purple
-  },
-  {
-    id: 4,
-    title: "Social Media & Performance Marketing",
-    description:
-      "Drive conversions and build communities through social-first performance campaigns. From paid social to influencer collaborations, we align strategy with performance metrics to deliver full-funnel success.",
-    imageSrc: "/service-4.png",
-    backgroundColor: "bg-[#d9a641]", // Purple
-  },
-];
+import { sectionsData } from "@/lib";
 
 const ServicePage = () => {
   const introTitle = "What we Provide";
@@ -57,39 +23,63 @@ const ServicePage = () => {
         // className={"lg:w-[65%] xl:w-[45%]"}
         button={<Button tag={"Contact Us"} className={"bg-black text-white"} />}
       />
-      <section className="font-sans mt-10 lg:mt-12 xl:mt-15">
-        {sectionsData.map((section, index) => (
-          <div
-            key={section.id}
-            className={`px-6 py-6 md:py-10 md:px-10 lg:px-15`}
-          >
-            <div className={`flex flex-col md:flex-row justify-center items-center ${
-              index % 2 !== 0 ? "md:flex-row-reverse" : ""
-            } border border-black`}>
-              {/* Text Content */}
-              <div className="flex flex-col items-start p-6 md:p-12 lg:w-1/2">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
-                  {section.title}
-                </h2>
-                <p className="text-sm md:text-base lg:text-lg text-black/80 max-w-lg">
-                  {section.description}
-                </p>
+      <div className="px-6 py-6 md:py-10 md:px-10 lg:px-15 xl:flex xl:justify-center">
+        <div className="xl:w-[70rem]">
+          {sectionsData.map((service) => (
+            <div key={service.id} className="border-b border-gray-400 py-10 lg:py-15">
+              <div>
+                <div className="">
+                  <div>
+                    <h1 className="text-2xl font-poppins-semibold uppercase lg:text-3xl">
+                      {service.id}. {service.title}
+                    </h1>
+                  </div>
+
+                  <p className="text-sm font-poppins-light mt-2 lg:text-base lg:mt-4">
+                    {service.description}
+                  </p>
+                </div>
               </div>
 
-              {/* Image Container */}
-              <div
-                className={`relative ${section.backgroundColor} w-full h-[18rem] md:h-[22rem] lg:h-[25rem] xl:h-[28rem] lg:w-1/2 mt-8 md:mt-0 py-5 lg:py-10 xl:py-13`}
-              >
-                <img
-                  src={section.imageSrc}
-                  alt={section.title}
-                  className="rounded-lg shadow-lg w-full h-full object-contain mix-blend-plus-lighter"
-                />
+              <div className="lg:flex lg:items-center lg:mt-10">
+                <div className="hidden lg:block lg:w-1/2 pr-10">
+                  <div
+                    className={`relative bg-[#222] w-full lg:h-[18rem] mt-8 md:mt-0 py-5 lg:py-10 xl:py-13`}
+                  >
+                    <img
+                      src={service.imageSrc}
+                      alt={service.title}
+                      className="rounded-lg shadow-lg w-full h-full object-contain mix-blend-plus-lighter"
+                    />
+                  </div>
+                </div>
+
+                <div className="lg:w-1/2">
+                  <div className="mt-5 lg:mt-0">
+                    <h1 className="text-lg font-poppins-semibold lg:text-xl">
+                      What do we offer:
+                    </h1>
+                    <div className="text-sm font-poppins-light lg:text-base mt-2">
+                      <ul className="list-disc pl-4">
+                        {service.offer.map((offer) => (
+                          <li key={offer.id}>{offer.data}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-5">
+                    <h1 className="text-lg font-poppins-semibold lg:text-xl">Outcomes:</h1>
+                    <p className="text-sm font-poppins-light mt-2 lg:text-base">
+                      {service.outcome}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </section>
+          ))}
+        </div>
+      </div>
       <CaseStudies />
       <Insight />
       <Contact />

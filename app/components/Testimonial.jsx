@@ -61,15 +61,15 @@ const Testimonial = () => {
       <h1 className="text-center text-3xl md:text-5xl font-poppins-medium mt-5">
         Trusted by Industry Leaders
       </h1>
-      <div className="bg-black text-white mt-10 md:mt-15 lg:mt-18 py-15 md:py-22 lg:py-26 px-6 md:px-10 lg:px-15">
-        <div className="flex flex-col gap-15 lg:gap-10">
+      <div className="bg-[#222] text-white mt-10 md:mt-15 lg:mt-18 py-15 md:py-22 lg:py-26 px-6 md:px-10 lg:px-15 lg:flex lg:justify-center">
+        <div className="flex flex-col gap-15 lg:gap-10 lg:w-[70rem]">
           <div className="relative size-10 lg:size-15">
             <Image src="/d-quote.png" alt="double-quote" fill />
           </div>
 
           <div
             ref={feedback}
-            className="font-poppins-medium text-center text-2xl lg:text-start lg:text-4xl lg:leading-[1.4] xl:text-5xl xl:leading-[1.4]"
+            className="font-poppins-medium text-center text-2xl lg:text-start lg:text-3xl lg:leading-[1.4] xl:text-4xl"
           >
             {currentClient.mesg}
           </div>

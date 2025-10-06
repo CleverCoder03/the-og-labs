@@ -3,7 +3,7 @@ import Footer from "@/app/components/Footer";
 import InsightHeroImage from "@/app/components/InsightHeroImage";
 import InsightPara from "@/app/components/InsightPara";
 import Navbar from "@/app/components/Navbar";
-import { blogs } from "@/lib";
+import { blogs } from "@/lib/blogs";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
@@ -15,16 +15,17 @@ const page = async ({ params }) => {
     return <div>Blog post not found!</div>;
   }
 
-  const paragraphs = insight.content.split("\n\n");
+  // This line is no longer needed because content is already an array.
+  // const paragraphs = insight.content.split("\n\n");
 
   return (
     <div className="">
       <Navbar />
-      <div className="w-dvw bg-black">
+      <div className="w-dvw bg-[#222]">
         <div className="h-full w-full">
           <div className="pt-30 lg:pt-35 text-8xl lg:text-9xl leading-[1.8] align-middle tracking-wider font-poppins-bold-italic text-white">
             <Marquee>
-              Insight{" "} 
+              Insight{" "}
               <div className="relative size-30 lg:size-40">
                 <Image
                   src="/bubble-1.png"
@@ -56,7 +57,6 @@ const page = async ({ params }) => {
 
           <div className="mt-30 flex flex-col justify-center items-center">
             <InsightPara />
-
             <InsightHeroImage src={insight.src} />
           </div>
 
@@ -72,13 +72,53 @@ const page = async ({ params }) => {
                 <p className="text-right md:text-left mt-8 lg:mt-12 font-poppins-medium-italic">
                   - {insight.author}
                 </p>
-                <div className="mt-10 lg:mt-15 text-sm md:text-base text-justify font-poppins-light">
-                  {paragraphs.map((paragraph, index) => (
-                    <p key={index} className="mb-4">
-                      {paragraph}
-                    </p>
-                  ))}
+
+                {/* MODIFICATION START: Render content based on its type */}
+                <div className="mt-10 lg:mt-15 text-sm md:text-base text-justify font-poppins-light space-y-4">
+                  {insight.content.map((item, index) => {
+                    switch (item.type) {
+                      case "heading":
+                        return (
+                          <h2
+                            key={index}
+                            className="text-2xl font-playfair-bold mt-8 mb-4"
+                          >
+                            {item.text}
+                          </h2>
+                        );
+                      case "list":
+                        return (
+                          <ul
+                            key={index}
+                            className="list-disc list-inside space-y-2 pl-4"
+                          >
+                            {item.items.map((listItem, liIndex) => (
+                              <li key={liIndex}>{listItem}</li>
+                            ))}
+                          </ul>
+                        );
+                      case "cta":
+                        return (
+                          <p
+                            key={index}
+                            className="my-6 p-4 bg-gray-800 rounded-lg border-l-4 border-purple-800 font-poppins-medium-italic"
+                          >
+                            {item.text}
+                          </p>
+                        );
+                       case "keywords":
+                         return (
+                          <p key={index} className="text-sm text-gray-400 mt-8 font-poppins-light-italic">
+                            <strong>Keywords:</strong> {item.text}
+                          </p>
+                        );
+                      case "paragraph":
+                      default:
+                        return <p key={index}>{item.text}</p>;
+                    }
+                  })}
                 </div>
+                {/* MODIFICATION END */}
               </div>
             </div>
           </div>

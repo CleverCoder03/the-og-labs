@@ -12,16 +12,13 @@ const About = () => {
         </p>
       </div>
       <div className="px-6 md:px-10 lg:px-15">
-        <p className="mt-12 text-center font-poppins-regular md:text-lg ">
+        {/* <p className="mt-12 text-center font-poppins-regular md:text-lg ">
           We didn’t start The OG Labs to be another digital marketing agency. We
           started it to redefine how marketing works in the age of AI.
-        </p>
-        <div className="text-center mt-8 font-poppins-regular md:text-lg">
-          <p>
-            Our founders came together with one mission, eliminate wasteful
-            strategies, outdated tactics, and guesswork from advertising. In
-            their place, we built a model where AI automation, and human
-            creativity work seamlessly together.
+        </p> */}
+        <div className="text-center w-full flex justify-center items-center mt-8 font-poppins-regular md:text-lg">
+          <p className="lg:w-[70rem]">
+            With deep roots in digital strategy and performance marketing, OG Labs was founded on the belief that advertising should be both intelligent and intuitive. We help brands navigate the evolving media landscape with agility, ensuring every impression, click, and conversion is optimized for value and growth.
           </p>
         </div>
 
