@@ -3,16 +3,16 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 
 const pageLinks = [
-  {id: 1, label: "About Us", link: "/about"},
-  {id: 2, label: "Services", link: "/services"},
-  {id: 3, label: "Contact us", link: "/contact"}
-]
+  { id: 1, label: "About Us", link: "/about" },
+  { id: 2, label: "Services", link: "/services" },
+  { id: 3, label: "Contact us", link: "/contact" },
+];
 
 const socailLinks = [
-  {id: 1, label: "Linkedin", link: "https://"},
-  {id: 2, label: "Instagram", link: "https://"},
-  {id: 3, label: "Twitter", link: "https://"}
-]
+  { id: 1, label: "Linkedin", link: "https://" },
+  { id: 2, label: "Instagram", link: "https://" },
+  { id: 3, label: "Twitter", link: "https://" },
+];
 
 const Footer = () => {
   return (
@@ -22,19 +22,17 @@ const Footer = () => {
           The OG Labs
         </h1>
         <div className="lg:flex lg:gap-20">
-          <div className="hidden mt-10 font-poppins-regular lg:block lg:mt-0">
-          <h2 className="text-black/50 font-bold text-lg">Menu</h2>
-          <ul className="mt-2 lg:mt-4 lg:flex lg:flex-col lg:gap-2">
-            {
-              pageLinks.map((page) => (
-                <Link key={page.id} href={page.link}>
+          <div className="hidden mt-10 font-poppins-regular lg:block lg:text-center lg:mt-0">
+            <h2 className="text-black/50 font-bold text-lg">Menu</h2>
+            <ul className="mt-2 lg:mt-4 lg:flex lg:flex-col lg:gap-2">
+              {pageLinks.map((page) => (
+                <Link key={page.id} href={page.link} className="underline underline-offset-2 decoration-1">
                   <li>{page.label}</li>
                 </Link>
-              ))
-            }
-          </ul>
-        </div>
-        <div className="mt-10 font-poppins-regular lg:mt-0">
+              ))}
+            </ul>
+          </div>
+          {/* <div className="mt-10 font-poppins-regular lg:mt-0">
           <h2 className="text-black/50 font-bold text-lg">Social</h2>
           <ul className="mt-2 lg:mt-4 flex flex-col gap-2">
             {
@@ -45,17 +43,23 @@ const Footer = () => {
               ))
             }
           </ul>
-        </div>
+        </div> */}
         </div>
         <div>
           <div className="mt-10 font-poppins-regular lg:mt-0">
-          <h2 className="text-black/50 font-bold text-lg">Business Enquires</h2>
-          <h1 className="mt-2">cheers@theoglabs.com</h1>
-        </div>
-        {/* <div className="mt-10 font-poppins-regular">
-          <h2 className="text-black/50 font-bold text-lg">Join Our Team</h2>
-          <h1 className="mt-2">apply@theoglabs.com</h1>
-        </div> */}
+            <h2 className="text-black/50 font-bold text-lg">
+              Business Enquires
+            </h2>
+            <h1 className="mt-2">
+              <a href="mailto:cheers@theoglabs.com">cheers@theoglabs.com</a>
+            </h1>
+          </div>
+          <div className="mt-10 font-poppins-regular">
+            <h2 className="text-black/50 font-bold text-lg">Policy</h2>
+            <Link href="/terms">
+              <h1 className="mt-2">Terms and Conditions</h1>
+            </Link>
+          </div>
         </div>
       </div>
 

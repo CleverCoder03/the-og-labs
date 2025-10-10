@@ -16,7 +16,7 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const TestNavbar = () => {
+const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [halfScroll, setHalfScroll] = useState(false);
   const navRef = useRef(null);
@@ -193,4 +193,4 @@ const TestNavbar = () => {
   );
 };
 
-export default TestNavbar;
+export default Navbar;

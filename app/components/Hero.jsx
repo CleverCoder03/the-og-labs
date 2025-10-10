@@ -147,6 +147,8 @@ const Hero = () => {
         <motion.div
         id="knot"
           className="relative top-[200px] md:inline mix-blend-plus-lighter"
+          drag
+          // dragSnapToOrigin
         >
           <Image
             src="/knot3.png"
@@ -154,12 +156,14 @@ const Hero = () => {
             height={isMobile ? "150" : "200"}
             width={isMobile ? "150" : "200"}
             className="max-w-none animatedImg"
-            draggable="false"
+            draggable="true"
           />
         </motion.div>
         <motion.div
         id="spring"
           className="relative -top-[230px] md:inline mix-blend-plus-lighter"
+          drag
+          // dragSnapToOrigin
         >
           <Image
             src="/spring.png"
@@ -167,7 +171,7 @@ const Hero = () => {
             height={isMobile ? "150" : "200"}
             width={isMobile ? "150" : "200"}
             className="max-w-none animatedImg"
-            draggable="false"
+            draggable="true"
           />
         </motion.div>
       </div>
@@ -178,7 +182,7 @@ const Hero = () => {
             id="title"
             className="text-white transition-all duration-200 font-playfair-regular text-[2.3rem] md:text-5xl lg:text-[5.1vw] lg:w-[80vw] text-center leading-[1.15] px-6"
           >
-            We Help Brands Grow Smarter in a Programmatic World
+            Helping Brands Grow with Bold Ideas and Smart Execution
           </h1>
           <p className="hidden md:block text-white text-xl text-center font-poppins-regular mt-10">
             Where Intelligence Meets Imagination
