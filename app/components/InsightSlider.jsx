@@ -31,18 +31,18 @@ export default function InsightSlider() {
           slidesPerView: 2,
           spaceBetween: 0,
         },
-        1280: {
-            slidesPerView: 3,
-          spaceBetween: 0,
-        }
+        // 1280: {
+        //     slidesPerView: 3,
+        //   spaceBetween: 0,
+        // }
       }}
       id="impactSlider"
       navigation={true}
       modules={[Navigation, Pagination]}
-      className="lg:!flex lg:!justify-center lg:!items-center !h-full lg:!w-[60rem] xl:!w-[70rem] lg:!px-10"
+      className="lg:!flex lg:!justify-center lg:!items-center !h-full lg:!w-[60rem] xl:!w-[70rem] lg:!px-4 xl:!px-10"
     >
         {blogs.map((blog) => (
-          <SwiperSlide key={blog.id} className="px-15 lg:px-12">
+          <SwiperSlide key={blog.id} className="px-15 lg:px-10">
             <InsightCard
               id={blog.id}
               src={blog.src}

@@ -33,7 +33,7 @@ const InsightHeroImage = ({src}) => {
         <Image
           src={src}
           alt="insight-image"
-          className="object-cover"
+          className="object-contain"
           fill
         />
       </div>
