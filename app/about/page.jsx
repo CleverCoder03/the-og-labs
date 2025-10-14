@@ -50,7 +50,7 @@ const AboutPage = () => {
       <LandingBanner title={"About Us"} />
       <div className="h-full w-full">
             <div className="px-6 md:px-10 lg:px-15 mt-10 md:mt-15 lg:mt-18 flex flex-col items-center md:items-start">
-              <h1 className="font-poppins-medium text-3xl md:text-4xl lg:text-[5vw] text-center md:text-left">
+              <h1 className="font-playfair-semibold text-3xl md:text-4xl lg:text-[5vw] text-center md:text-left">
                 {introTitle}
               </h1>
               {AboutIntroPara.map((para)=>(
@@ -71,7 +71,7 @@ const AboutPage = () => {
         <div className="absolute bg-black h-[70%] w-full bottom-0"></div>
       </div>
       <div className="mt-20 px-6 md:px-10 lg:px-15">
-        <h1 className="text-center text-4xl md:text-5xl font-poppins-medium">
+        <h1 className="text-center text-4xl md:text-5xl font-playfair-semibold">
           Our Values
         </h1>
         <div className="lg:flex lg:flex-wrap lg:justify-between">

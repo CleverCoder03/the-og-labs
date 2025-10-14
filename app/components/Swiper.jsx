@@ -17,7 +17,7 @@ export default function Slider() {
   return (
     <div className="!bg-[#0E0652] mt-20 lg:mt-30 text-white py-10 md:py-15 lg:py-18">
       <h2 className="text-center md:text-xl">Our Services</h2>
-      <h1 className="text-center text-3xl md:text-5xl mt-5 font-poppins-medium">
+      <h1 className="text-center text-3xl md:text-5xl mt-5 font-playfair-semibold">
         Our Core Services
       </h1>
       <Swiper

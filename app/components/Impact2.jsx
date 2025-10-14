@@ -39,7 +39,7 @@ const Impact2 = () => {
       <div>
         <div className="flex flex-col items-center">
           <h1 className="md:text-xl">The OG Labs Expertise</h1>
-          <div className="my-8 text-center text-4xl lg:text-5xl xl:text-6xl font-poppins-semibold">
+          <div className="my-8 text-center text-4xl lg:text-5xl xl:text-6xl font-playfair-semibold">
             <h1>How We</h1>
             <h1>Create Impact</h1>
           </div>

@@ -1,12 +1,14 @@
 const ContactCard = () => {
   return (
     <div className="bg-[#0E0652] text-white py-10 lg:py-15 xl:py-18 px-6 md:px-10 lg:px-15">
-        <div className="flex flex-col lg:flex-row gap-15">
+        <div className="flex flex-col">
             {/* <div className="lg:w-1/2"> */}
-            <div className="text-center">
+            <div className="text-center lg:flex lg:justify-center">
                 {/* <h2 className="font-poppins-regular">Contact Info</h2> */}
                 {/* <h1 className="font-poppins-medium text-4xl mt-2 sm:text-5xl sm:w-[50vw] lg:w-full lg:font-poppins-regular lg:text-[6vw] lg:leading-[1.1]">Your success is our priority</h1> */}
-                <h1 className="font-poppins-medium text-4xl mt-2 sm:w-[80vw] lg:w-full lg:font-poppins-regular lg:text-[5vw] lg:leading-[1.1]">Looking for Measurable Growth? You’re in the Right Place</h1>
+                <div className="lg:w-[70rem]">
+                    <h1 className="text-4xl mt-2 sm:w-[80vw] lg:w-full font-playfair-semibold lg:text-[4vw] lg:leading-[1.1]">Looking for Measurable Growth? You’re in the Right Place</h1>
+                </div>
             </div>
             {/* <div className="flex flex-col lg:flex-row gap-15 lg:w-1/2">
                 <div className="lg:flex lg:flex-col lg:w-[22vw] lg:justify-end">

@@ -33,7 +33,7 @@ export default function Home() {
           <HeroPara />
           {/* <Services /> */}
           <Slider />
-          <Testimonial />
+          {/* <Testimonial /> */}
           <About />
           {/* <Process /> */}
           <Clients />

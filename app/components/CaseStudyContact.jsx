@@ -9,7 +9,7 @@ const CaseStudyContact = () => {
         <h2 className="text-white font-poppins-regular md:text-xl">
           Contact Us
         </h2>
-        <div className="text-white font-poppins-semibold text-4xl lg:text-[6.5vw] lg:font-poppins-regular lg:leading-[1.1] my-8">
+        <div className="text-white font-playfair-semibold text-4xl lg:text-[6.5vw]  lg:leading-[1.1] my-8">
           <h1>Want similar results</h1>
           <h1>for your business?</h1>
         </div>

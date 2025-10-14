@@ -25,7 +25,7 @@ const CaseStudies = () => {
     <div className="">
       <div className="bg-white mt-10 md:mt-15 lg:mt-18">
         <h2 className="text-center md:text-xl">Our Portfolio</h2>
-        <p className="text-3xl md:text-5xl font-poppins-medium text-center mt-5">
+        <p className="text-3xl md:text-5xl font-playfair-semibold text-center mt-5">
           Case Studies
         </p>
       </div>
@@ -59,25 +59,6 @@ const CaseStudies = () => {
                   </p>
                 </div>
               </div>
-
-              {/* Floating Image */}
-              {/* {hoveredId === caseStudy.id && (
-                <Image
-                  src={caseStudy.src} // Use the actual image source
-                  alt={`case-study-${caseStudy.title}`}
-                  width={170} // Adjust width and height as needed
-                  height={120}
-                  style={{
-                    position: "fixed", // Use 'fixed' to position relative to the viewport
-                    left: mousePosition.x + 100, // Offset from cursor for better visibility
-                    top: mousePosition.y + 80,
-                    objectFit: "contain",
-                    pointerEvents: "none", // Prevent image from blocking mouse events
-                    zIndex: 9999, // Ensure it's on top of other content
-                    transform: "translate(-50%, -50%)", // Center the image on the cursor
-                  }}
-                />
-              )} */}
             </div>
           </Link>
         ))}

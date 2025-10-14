@@ -2,9 +2,9 @@ import React from "react";
 
 const Approach = ({ headline, introText, steps }) => {
   return (
-    <div className="relative mt-10 md:mt-15 lg:mt-18 py-10 md:py-15 lg:py-18">
+    <div className="relative mt-10 md:mt-15 lg:mt-18 pt-10 md:pt-15 lg:pt-18">
       <div className="px-6 md:px-10 lg:px-15">
-        <h1 className="text-4xl md:text-5xl font-poppins-medium text-white">{headline}</h1>
+        <h1 className="text-4xl md:text-5xl font-playfair-semibold text-white">{headline}</h1>
         <p className="md:text-lg font-poppins-regular mt-5 text-white/70">{introText}</p>
       </div>
       <div className='absolute bg-black h-full lg:h-[60%] w-full left-0 top-0 -z-10'></div>
@@ -19,7 +19,7 @@ const Approach = ({ headline, introText, steps }) => {
                 <h1>{step.id}</h1>
                 <h1>{step.title}</h1>
               </div>
-              <p className="font-poppins-light text-sm text-white/70">
+              <p className="font-poppins-light text-sm text-white/70 capitalize">
                 {step.description}
               </p>
             </div>

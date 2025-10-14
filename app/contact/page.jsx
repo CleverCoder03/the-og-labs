@@ -136,7 +136,7 @@ const ContactPage = () => {
       <div className="py-10 lg:py-15 xl:py-18 px-6 md:px-10 lg:px-15 lg:flex lg:items-center lg:justify-between">
         <div>
           <h2 className="font-poppins-regular text-center md:text-left">Get Started</h2>
-          <div className="font-poppins-medium text-3xl mt-2 sm:text-4xl md:text-5xl lg:font-poppins-regular lg:text-[6vw] lg:leading-[1.1] text-center md:text-left">
+          <div className="text-3xl mt-2 sm:text-4xl md:text-5xl font-playfair-regular lg:text-[6vw] lg:leading-[1.1] text-center md:text-left">
             <h1>Get in touch with us.</h1>
             <h1>We're here to assist you.</h1>
           </div>
