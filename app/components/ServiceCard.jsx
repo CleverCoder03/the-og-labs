@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export function ServiceCard({title, desc, bgCoverImg, serviceImg}) {
   return (
-    <CardContainer className="h-full xl:w-[22dvw]">
-      <div className="absolute size-full">
+    <CardContainer className="h-full xl:w-[22dvw] bg-white rounded-xl">
+      <div className="absolute size-full opacity-80">
         <Image src={bgCoverImg} alt="service-1-bg" className="rounded-xl" fill />
       </div>
       <CardBody
@@ -19,8 +19,8 @@ export function ServiceCard({title, desc, bgCoverImg, serviceImg}) {
         </CardItem>
         
         <CardItem translateZ="100" className="size-full mt-5">
-          <div className="relative h-40 w-full opacity-70 my-15 mix-blend-plus-lighter">
-            <Image src={serviceImg} className="object-contain" alt="spring" fill />
+          <div className="relative h-40 w-full opacity-90 my-15">
+            <Image src={serviceImg} className="object-contain text-white" alt="spring" fill />
           </div>
         </CardItem>
         <div className="flex flex-col justify-center items-start">

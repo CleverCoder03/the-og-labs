@@ -1,3 +1,5 @@
+"use client"
+import {motion} from "motion/react"
 import React from "react";
 import Navbar from "../components/Navbar";
 import CaseStudies from "../components/CaseStudies";
@@ -8,6 +10,8 @@ import LandingBanner from "../components/LandingBanner";
 import IntroPara from "../components/IntroPara";
 import Button from "../components/Button";
 import { sectionsData } from "@/lib";
+import Image from "next/image";
+import { Section } from "lucide-react";
 
 const ServicePage = () => {
   const introTitle = "What we Provide";
@@ -26,7 +30,7 @@ const ServicePage = () => {
       <div className="px-6 py-6 md:py-10 md:px-10 lg:px-15 xl:flex xl:justify-center">
         <div className="xl:w-[70rem]">
           {sectionsData.map((service) => (
-            <div key={service.id} className="border-b border-gray-400 py-10 lg:py-15">
+            <motion.div initial={{y: 200, opacity: 0}} whileInView={{y: 0, opacity: 1}} viewport={{ once: true }} transition={{ duration: 0.8, ease: [0.83, 0, 0.17, 1] }} key={service.id} className="border-b border-gray-400 py-10 lg:py-15">
               <div>
                 <div className="">
                   <div>
@@ -44,13 +48,16 @@ const ServicePage = () => {
               <div className="lg:flex lg:items-center lg:mt-10">
                 <div className="hidden lg:block lg:w-1/2 pr-10">
                   <div
-                    className={`relative bg-[#222] w-full lg:h-[18rem] mt-8 md:mt-0 py-5 lg:py-10 xl:py-13`}
+                    className={`relative ${service.backgroundColor} rounded-lg shadow-lg flex justify-center items-center w-full lg:h-[18rem] mt-8 md:mt-0 py-5 lg:py-10 xl:py-13`}
                   >
-                    <img
+                    <div className="relative size-45">
+                      <Image
                       src={service.imageSrc}
                       alt={service.title}
-                      className="rounded-lg shadow-lg w-full h-full object-contain mix-blend-plus-lighter"
+                      fill
+                      className="w-full h-full object-contain mix-blend-plus-darker"
                     />
+                    </div>
                   </div>
                 </div>
 
@@ -76,7 +83,7 @@ const ServicePage = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

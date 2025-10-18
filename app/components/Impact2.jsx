@@ -1,37 +1,9 @@
+"use client"
+import {motion} from "motion/react"
 import React from "react";
 import Button from "./Button";
 import Link from "next/link";
 import { sectionsData } from "@/lib";
-
-const impactCards = [
-  {
-    id: 1,
-    title: "Programmatic Advertising & SEM",
-    subTitle: "AI-Powered Campaigns, Optimized in Real-Time",
-    line1: "Automated bidding for efficiency and scale",
-    line2: "Audience targeting that adapts on the fly",
-    line3: "Performance analytics that sharpen every decision",
-    bgColor: "#0E0652",
-  },
-  {
-    id: 2,
-    title: "Social Media & Performance Marketing",
-    subTitle: "Turning Engagement Into Measurable Growth",
-    line1: "Data-backed paid social strategies",
-    line2: "AI-driven optimization across platforms",
-    line3: "Conversion-focused campaigns that adapt in real time",
-    bgColor: "#0C0070",
-  },
-  {
-    id: 3,
-    title: "Creative Content & Storytelling",
-    subTitle: "Turning Engagement Into Measurable Growth",
-    line1: "Data-backed paid social strategies",
-    line2: "AI-driven optimization across platforms",
-    line3: "Conversion-focused campaigns that adapt in real time",
-    bgColor: "#895bbc",
-  },
-];
 
 const Impact2 = () => {
   return (
@@ -49,7 +21,7 @@ const Impact2 = () => {
 
       <div className="flex flex-col items-center">
         {sectionsData.map((card) => (
-          <div key={card.id} className="flex gap-4 lg:gap-6 border-b-[0.5] border-gray-300 py-10 lg:py-15 lg:w-[70rem]">
+          <motion.div initial={{y: 200, opacity: 0}} whileInView={{y: 0, opacity: 1}} viewport={{ once: true }} transition={{ duration: 0.8, ease: [0.83, 0, 0.17, 1] }} key={card.id} className="flex gap-4 lg:gap-6 border-b-[0.5] border-gray-300 py-10 lg:py-15 lg:w-[70rem]">
             <div className="font-poppins-semibold text-lg uppercase">{card.id}.</div>
             <div>
               <h1 className="font-poppins-semibold text-lg uppercase">
@@ -59,7 +31,7 @@ const Impact2 = () => {
                 {card.description}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
 
         <div className="mt-15">

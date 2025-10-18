@@ -143,7 +143,7 @@ const Hero = () => {
           fill
         />
       </div>
-      <div className="absolute top-0 left-0 h-screen w-screen flex justify-between items-center md:px-[10vw] overflow-hidden">
+      {/* <div className="absolute top-0 left-0 h-screen w-screen flex justify-between items-center md:px-[10vw] overflow-hidden">
         <motion.div
         id="knot"
           className="relative top-[200px] md:inline mix-blend-plus-lighter"
@@ -174,7 +174,7 @@ const Hero = () => {
             draggable="true"
           />
         </motion.div>
-      </div>
+      </div> */}
 
       <div className="h-screen w-full flex flex-col justify-center items-center">
         <div className="mt-20  lg:mt-50">
