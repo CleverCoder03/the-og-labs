@@ -28,7 +28,7 @@ const Navbar = () => {
   const { y: currentScolllY } = useWindowScroll();
 
   useEffect(() => {
-    if (currentScolllY >= 300) {
+    if (currentScolllY >= 100) {
       setHalfScroll(true);
     } else {
       setHalfScroll(false);

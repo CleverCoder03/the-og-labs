@@ -1,4 +1,5 @@
 "use client";
+import {motion} from "motion/react"
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -25,7 +26,10 @@ const InsightHeroImage = ({src}) => {
       })
   );
   return (
-    <div ref={containerRef} className="mt-30">
+    <motion.div initial={{ opacity: 0 }}
+              // The state to animate to WHEN the element is in the viewport
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, ease: [0.83, 0, 0.17, 1], delay: 0.4 }} ref={containerRef} className="mt-30">
       <div
         ref={imageContainerRef}
         className="relative w-[70vw] md:w-[75vw] h-[50vh] lg:h-[80vh]"
@@ -37,7 +41,7 @@ const InsightHeroImage = ({src}) => {
           fill
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
