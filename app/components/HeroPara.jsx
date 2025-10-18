@@ -62,7 +62,7 @@ const HeroPara = () => {
               ref={paraRef}
               className="mr-4 align-middle text-center text-2xl lg:text-3xl xl:text-4xl w-full lg:w-[70rem]"
             >
-              AI-powered, programmatic-first marketing built for brands that
+              Programmatic-first marketing built for brands that
               want to scale smarter. We merge automation, creativity, and
               strategy to maximize ROI and unlock measurable growth.
             </p>

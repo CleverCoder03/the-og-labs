@@ -23,7 +23,7 @@ const page = async ({ params }) => {
       <Navbar />
       <div className="w-dvw bg-[#222]">
         <div className="h-full w-full">
-          <div className="pt-30 lg:pt-35 text-8xl lg:text-9xl leading-[1.8] align-middle tracking-wider font-poppins-bold-italic text-white">
+          {/* <div className="pt-30 lg:pt-35 text-8xl lg:text-9xl leading-[1.8] align-middle tracking-wider font-poppins-bold-italic text-white">
             <Marquee>
               Insight{" "}
               <div className="relative size-30 lg:size-40">
@@ -53,10 +53,10 @@ const page = async ({ params }) => {
                 />
               </div>
             </Marquee>
-          </div>
+          </div> */}
 
-          <div className="mt-30 flex flex-col justify-center items-center">
-            <InsightPara />
+          <div className="pt-10 md:pt-20 lg:pt-30 flex flex-col justify-center items-center">
+            {/* <InsightPara /> */}
             <InsightHeroImage src={insight.src} />
           </div>
 
